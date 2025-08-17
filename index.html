@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="#" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"/>
+
+  </head>
+  <body class="font-space dark:bg-black text-gray-400 min-h-screen relative sm:text-base">
+    <div id="root"></div>
+    
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/modal.js"></script>
+    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-8 py-3 border-b border-dotted border-gray-400/40">
+      <div class="mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <!-- Left Navigation Links -->
+        <div class="flex items-center space-x-8">
+          <a href="index.html"><img src="img/logo-on-dark.webp" alt="logo" class="h-7 w-auto" /></a>
+          <nav class="flex items-center space-x-4 hidden md:flex">
+            <div><a href="/index.html" class="nav-link hover:text-gray-300">Home</a></div>
+            <div><a href="/about.html" class="nav-link hover:text-gray-300">About Us</a></div>
+            <div class="relative group">
+               <button class="nav-link flex items-center gap-1 hover:text-gray-300">
+                  Services
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              </button>
+              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
+                <a href="/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
+                <a href="/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
+                <a href="/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
+                <a href="/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
+                <a href="/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
+              </div>
+            </div>
+            <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
+
+            <div class="relative group">
+              <!--<a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">-->
+              <button class="nav-link flex items-center gap-1 hover:text-gray-300">
+                  Projects
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              </button>
+              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission lines & Substations</a>
+                <a href="/road-projects.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+                <a href="/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
+                <a href="/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
+                <a href="/dams.html" class="block px-4 py-2 hover:text-gray-300">Dams</a>
+                <a href="/water-projects.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+                
+              </div>
+            </div>
+
+            <div><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
+          </nav>
+        </div>
+
+        <!-- Right Navigation Links -->
+        <div class="flex space-x-3">
+          <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+            Get a Quotation
+            <span class="text-white rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </span>
+            </button> 
+          <div id="modalOverlay"
+     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+
+  <!-- Modal Content -->
+  <div id="modalContent"
+       class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+              max-h-[90vh] overflow-y-auto">
+    
+    <!-- Close Button -->
+    <button id="closeModal"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+
+    <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+
+    <!-- Email -->
+    <input type="email" placeholder="EMAIL ADDRESS*" required
+           class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+
+    <!-- Name -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" placeholder="FIRST NAME *" required
+             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+      <input type="text" placeholder="SURNAME *" required
+             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+    </div>
+
+    <!-- Contact and Market -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+        <option value="" class="text-gray-400">CONTACT NUMBER *</option>
+        <option>Uganda</option>
+        <option>Kenya</option>
+      </select>
+      <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+        <option value="">SELECT SERVICE</option>
+        <option>Laboratory Testing</option>
+        <option>Field Investigations</option>
+        <option>Equipment Hire</option>
+        <option>Training & Capacity Building</option>
+      </select>
+    </div>
+
+    <!-- Challenge -->
+    <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+              class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+
+    <!-- Consent -->
+    <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+      <span>I understand the privacy policy </span>
+    </label>
+    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+      </p>
+
+    <!-- Submit / Take me home -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <button type="submit"
+              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+        SEND
+      </button>
+      <button type="button"
+              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+        TAKE ME HOME
+      </button>
+    </div>
+  </div>
+</div>
+
+          <button id="menuToggle" class="md:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+  <!-- Overlay dropdown -->
+  <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-51 hidden">
+    <div class="bg-black text-white p-6 space-y-3 h-full w-[70%] text-lg left-0 border-r border-dotted border-gray-400/40">
+      <a href="#" class="block hover:text-gray-300">Home</a>
+      <a href="#" class="block hover:text-gray-300">About Us</a>
+      <a href="#" class="block hover:text-gray-300">Services</a>
+      <!--<a href="#" class="block hover:text-gray-300">Projects</a>-->
+       <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
+    Projects
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+
+  <!-- Mobile -->
+  <div class="mt-2 space-y-1 block md:hidden">
+    <a href="/road-projects.html" class="block px-4 py-2 hover:bg-gray-100">Road Projects</a>
+    <a href="/bridges.html" class="block px-4 py-2 hover:bg-gray-100">Bridges</a>
+    <a href="/dams.html" class="block px-4 py-2 hover:bg-gray-100">Dams</a>
+    <a href="/water-projects.html" class="block px-4 py-2 hover:bg-gray-100">Water Projects</a>
+  </div>
+      <a href="#" class="block hover:text-gray-300">Contact Us</a>
+      <!--<hr class="border-gray-600">-->
+      <button class="border-gray-900 border-1 py-2 px-2 rounded-lg">
+        <a href="#" class="block hover:text-gray-300">Get a Quote</a></button>
+    </div>
+  </div><!--End of mobile dropdown-->
+
+ 
+    <!-- Hero section -->
+    <section class="relative h-136 w-full">
+      <!-- Image -->
+      <div>
+      <div class="absolute inset-0 bg-[url('/img/getlab-premises.jpg')] bg-cover bg-center"></div>
+      <!-- Overlay -->
+      <!--<div class="absolute inset-0 bg-gray bg-opacity-90 z-0"></div>
+      Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent dark:from-black/99 z-10"></div>
+      <!--<div class="absolute inset-0 bg-gradient-to-r from-black via-gray to-transparent dark:from-black/99"></div>-->
+    
+
+      <!-- Content of hero section-->
+      
+      <div class="relative z-10 flex items-center h-100 px-8 pt-8 md:px-24">
+        <div class="text-white max-w-2xl">
+          <h1 class="font-hero mt-13 text-4xl md:text-5xl leading-tight">
+            YOUR <span class="text-[#14953D]">RELIABLE</span><br />
+            GEOTECHNICAL<br />
+            ENGINEERING LABORATORY
+          </h1>
+          <p class="mt-6 text-[17px]">With modern, fully equipped facilities, we handle projects of any scale. Our team is defined by relentless focus, fast execution, and a deep commitment to quality.</p>
+          <a href="#" class="inline-flex items-center mt-8 px-6 py-2 bg-[#14953D] text-black/80 font-semibold shadow hover:bg-[#14953D]/90 transition">
+              Get a quotation
+             <span class="text-black/80 ml-1 rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </span>
+          </a>
+          </div>
+        </div>
+      </section><!-- End of hero section-->
+
+    <!-- Customer Section -->
+    <section class="relative w-full border-b border-dashed border-gray-400/40">
+        <p class="text-center py-6">Trusted by 50+ companies</p>
+      
+      <div class="pb-8 overflow-hidden relative">
+        <!-- Left gradient mask -->
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black/90 to-transparent z-10"></div>
+        <!-- Right gradient mask -->
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black/90 to-transparent z-10"></div>
+        <div class="whitespace-nowrap animate-slide flex gap-16">
+          <img src="/img/clients/1.png" alt="Client 1" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/2.png" alt="Client 2" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/3.png" alt="Client 3" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/4.png" alt="Client 4" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/5.png" alt="Client 5" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/6.png" alt="Client 6" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/7.png" alt="Client 7" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/8.png" alt="Client 8" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/9.png" alt="Client 9" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/10.png" alt="Client 10" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/11.png" alt="Client 11" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/12.png" alt="Client 12" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/13.png" alt="Client 13" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/14.png" alt="Client 14" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/15.png" alt="Client 15" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/16.png" alt="Client 16" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/17.png" alt="Client 17" class="h-12 grayscale opacity-100 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/18.png" alt="Client 18" class="h-12 grayscale opacity-100 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/19.png" alt="Client 19" class="h-12 grayscale opacity-100 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/20.png" alt="Client 20" class="h-12 grayscale opacity-100 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/21.png" alt="Client 21" class="h-12 grayscale opacity-100 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/22.png" alt="Client 22" class="h-12 grayscale opacity-100 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/23.png" alt="Client 23" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/24.png" alt="Client 24" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/25.png" alt="Client 25" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/26.png" alt="Client 26" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/27.png" alt="Client 27" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/28.png" alt="Client 28" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/29.png" alt="Client 29" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/30.png" alt="Client 30" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/31.png" alt="Client 31" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/32.png" alt="Client 32" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/33.png" alt="Client 33" class="h-12 grayscale opacity-60 hover:opacity-100 transition duration-300" />
+        </div>
+      </div> 
+    </section><!-- End of customer section -->
+
+    <!--Statistics section-->
+    <section class="relative h-full py-8 px-8 md:px-24 bg-[#121212]">
+      <!--px-4 sm:px-6 md:px-10--sm:px-8 md:px-12 lg:px-16-->
+        <h1 class="text-4xl text-white font-bold mb-5">Committed to <span class="text-[#14953D]">excellence</span> since <span class="text-[#14953D]">2014</span></h1>
+        <p class="text-[#F2F2F2]/70 mt-2">Geotechnical Engineering and Technology Laboratory (GETLAB) Limited has, over the past 10 years, been shaped by the practices and principles that distinguish world-class engineering labs from the rest.</p>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+          <div class="rounded-[30px] bg-black border border-[#FFFFFF0D] bg-grid p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold text-5xl pt-4 px-2">1550+</h1>
+            <p class="mt-2 px-2">Completed & approved projects</p>
+          </div>
+          <div class="rounded-[30px] bg-black bg-grid border-[#FFFFFF0D] p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold text-5xl pt-4 px-2">10+</h1>
+            <p class="mt-2 px-2 ">Years of experience</p>
+          </div>
+          <div class="rounded-[30px] bg-black bg-grid border-[#FFFFFF0D] p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold text-5xl pt-4 px-2">100+</h1>
+            <p class="mt-2 px-2">Returning customers</p>
+          </div>
+          <div class="rounded-[30px] bg-black bg-grid border-[#FFFFFF0D] p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold text-5xl pt-4 px-2">Certified</h1>
+            <p class="mt-2 px-2">ISO/IEC 17025 (KENAS)</p>
+          </div>
+        </div>
+    </section><!-- End of statistics section -->
+
+    <!-- Services sections -->
+    <section class="relative text-white pt-8 border-t border-dashed border-gray-400/40">
+      <h1 class="text-4xl font-bold pb-8 px-8 md:px-24">Our Services</h1>
+      <!--<div class="relative bg-cover bg-center bg-[url('/img/pic-1a.jpg')]">-->
+        <div class="relative bg-cover bg-center bg-[url('/img/geotechnical-investigations/3.jpg')]">
+        <!--<div class="absolute inset-0 bg-gradient-to-r from-black to-transparent dark:from-black/98"></div>-->
+        <div class="absolute top-0 left-0 h-full w-3/5 bg-gradient-to-r from-black/98 to-transparent"></div>
+        <!--<div class="absolute inset-0 bg-gray bg-opacity-70"></div>-->
+        <div class="relative z-10 px-8 py-8 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-32">
+          <div class="flex flex-col justify-center">
+            <h2 class="text-2xl font-bold mb-2">Focus on your project without worrying about the Geotechnics </h2><br />
+              <p class="text-lg">We take pride in offering a wide range of <span class="text-[#14953D] font-extrabold">materials testing services</span>
+                 for <span class="text-[#14953D] font-extrabold">civil infrastructure projects</span></p>
+          </div>
+          <!-- Right grid (services) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-6 mb-6">
+            <a href="/soil-testing.html" class="hover:bg-[#14953D]/30">
+            <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70 text-white font-extrabold uppercase">
+              Soil Testing</div></a> 
+            <a href="/asphalt-testing.html" class="hover:bg-[#3B3B3B]/40">
+              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70 text-center font-extrabold uppercase">
+                Asphalt Testing
+              </div>
+            </a>  
+            <a href="/concrete-aggregate-testing.html" class="hover:bg-[#14953D]/30">
+              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
+                Concrete & Aggregate Testing
+              </div>
+            </a>
+            <a href="/chemical-testing.html" class="hover:bg-[#14953D]/50">
+              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
+                Chemical Testing
+              </div>
+            </a>
+            <a href="/geotechnical-investigations.html" class="hover:bg-[#14953D]/40">
+              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
+                Geotechnical Investigations
+              </div>
+            </a>
+            <a href="/geophysical-investigations.html" class="hover:bg-[#14953D]/40">
+              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
+                Geophysical Investigations
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    
+    </section><!-- End of services' section-->
+
+  <!-- Projects section-->
+  <section class="relative text-white pt-8 pb-12 bg-[#121212] border-t border-dashed border-gray-400/40">
+    <h1 class="text-4xl font-bold pb-8 px-8 md:px-24">Projects</h1>
+    <!--<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 px-8 md:px-20 gap-2">-->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-8 md:px-24 auto-rows-[450px]">
+    <!-- Row 1: wide card spanning all 3 cols -->
+    <a href="/transmissions-substations.html" class="col-span-1 sm:col-span-2 lg:col-span-3 relative group overflow-hidden border-l border-t border-r border-[#2c2f33]">
+      <div class="absolute inset-0 bg-[url('/img/eacop-pipeline.jpeg')] bg-cover bg-top transition-transform duration-500 group-hover:scale-110"></div>
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
+      <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/95 to-transparent"></div>
+       <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+        <span class="text-lg font-semibold">Transmission lines & Substations</span>
+        <div class="p-2 border border-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
+    </a>
+    <!-- Row 2: wide card spanning all 2 cols -->
+    <a href="/road-projects.html" class="col-span-2 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+      <div class="absolute inset-0 bg-[url('/img/kyenjojo-fortportal-road.jpg')] bg-cover bg-top transition-transform duration-500 group-hover:scale-110"></div>
+      <!--<img src="bg-[url('/img/eacop-pipeline.jpeg')" alt="" class="absolute inset-0 w-full h-full object-cover">-->
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
+      <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/90 to-transparent"></div>
+      <div class="absolute bottom-4 left-4 flex items-center gap-1 text-white">
+        <span class="text-lg font-semibold">Roads</span>
+        <div class="p-2 border border-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <a href="/bridges.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+      <div class="absolute inset-0 bg-[url('/img/apaa-bridge.jpeg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
+      <div class="absolute top-0 left-0 h-full w-2/5 bg-gradient-to-r from-black/30 via-black/5 to-transparent"></div>
+      <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+        <span class="text-lg font-semibold">Bridges</span>
+        <div class="p-2 border border-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </div>
+    </a>
+
+  <!-- Row 3: 3 small cards -->
+ 
+  <a href="/buildings.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+    <div class="absolute inset-0 bg-[url('/img/buildings-cover.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
+    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
+    <div class="absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-black/70 to-transparent"></div>
+    <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+      <span class="text-lg font-semibold">Buildings</span>
+      <div class="p-2 border border-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <a href="/dams.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+    <div class="absolute inset-0 bg-[url('/img/dams.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
+    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
+    <div class="absolute top-0 left-0 h-full w-2/5 bg-gradient-to-r from-black/30 via-black/5 to-transparent"></div>
+    <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+      <span class="text-lg font-semibold">Dams</span>
+      <div class="p-2 border border-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+  <a href="/water-projects.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+    <div class="absolute inset-0 bg-[url('/img/buildings-cover.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
+    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
+    <div class="absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-black/70 to-transparent"></div>
+    <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+      <span class="text-lg font-semibold">Water</span>
+      <div class="p-2 border border-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>
+</div>
+
+  <!-- 3 col -->
+  <!--<a href="/bridges.html" class="col-span-3 group relative overflow-hidden shadow-lg block">
+    <div class="absolute inset-0 bg-[url('/img/apaa-bridge.jpeg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent dark:from-black/50"></div>
+    <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+      <span class="text-lg font-semibold">Bridges</span>
+      <div class="p-2 border border-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  </a>-->
+
+</div>
+      
+  </section><!-- End of projects section -->
+
+    
+
+
+  <!-- Footer section -->
+    <footer class="relative bg-black px-8 py-12 md:px-24">
+      <div class="flex flex-col lg:flex-row gap-2">
+        <!-- Left Side -->
+        <div class="w-full lg:w-[34%]">
+          <a href="index.html">
+            <img src="img/logo-on-dark.webp" alt="logo" class="h-9 w-auto mb-4" />
+          </a>
+
+          <h2 class="text-white text-[14px]">
+            Geotechnical Engineering and Technology <br />
+            Laboratory (GETLAB) Limited
+          </h2>
+          <p class="mt-4 text-[14px]">
+            Plot 1234, Block 197, Namirembe Hillside Road, <br />
+            Kitetika Cell<br />
+            Kasangati Town Council, Wakiso, Uganda<br />
+            +256 (0) 392 175 883<br>
+            info@getlab.co.ug
+          </p>
+        </div>
+
+        <!-- Right Side -->
+       <!-- Right Section -->
+  <div class="w-full lg:w-[66%]">
+    <div class="w-full h-72 lg:h-80">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.716709934078!2d32.587741673576765!3d0.4089131638805127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbc952b3a8f1%3A0xb6a5c2eaeb42c184!2sGETLAB%20LTD!5e0!3m2!1sen!2sug!4v1754395067576!5m2!1sen!2sug" 
+        class="w-full h-full border-0" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+      </div>
+      <hr class="mt-15 mb-8 border-gray-900">
+      <div class="text-left">&copy; 2025 <strong>GETLAB</strong></div>
+
+      <!-- Back to Top -->
+      <a href="#top" class="fixed bottom-5 right-5 bg-white text-green-600 p-2 rounded-full shadow-lg">
+        ↑
+      </a>
+    </footer>
+  
+  </body>
+</html>
