@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+  <meta charset="UTF-8" />
+    <link rel="icon" type="#" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body class="font-space dark:bg-black text-gray-400 min-h-screen relative sm:text-base">
+    <div id="root"></div>
+    
+    <script type="module" src="/js/main.js"></script>
+        <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-8 py-3 border-b border-dotted border-gray-400/40">
+      <div class="mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <!-- Left Navigation Links -->
+        <div class="flex items-center space-x-8">
+          <a href="index.html"><img src="img/logo-on-dark.webp" alt="logo" class="h-7 w-auto" /></a>
+          <nav class="flex items-center space-x-4 hidden md:flex">
+            <div><a href="/index.html" class="nav-link hover:text-gray-300">Home</a></div>
+            <div><a href="/about.html" class="nav-link hover:text-gray-300">About Us</a></div>
+            <div class="relative group">
+               <button class="nav-link flex items-center gap-1 hover:text-gray-300">
+                  Services
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              </button>
+              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
+                <a href="/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
+                <a href="/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
+                <a href="/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
+                <a href="/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
+                <a href="/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
+              </div>
+            </div>
+            <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
+
+            <div class="relative group">
+              <!--<a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">-->
+              <button class="nav-link flex items-center gap-1 hover:text-gray-300">
+                  Projects
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              </button>
+              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission lines & Substations</a>
+                <a href="/road-projects.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+                <a href="/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
+                <a href="/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
+                <a href="/dams.html" class="block px-4 py-2 hover:text-gray-300">Dams</a>
+                <a href="/water-projects.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+                
+              </div>
+            </div>
+
+            <div><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
+          </nav>
+        </div>
+
+        <!-- Right Navigation Links -->
+        <div class="flex space-x-3">
+          <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+            Get a Quotation
+            <span class="text-white rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </span>
+            </button> 
+          <div id="modalOverlay"
+     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+
+  <!-- Modal Content -->
+  <div id="modalContent"
+       class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+              max-h-[90vh] overflow-y-auto">
+    
+    <!-- Close Button -->
+    <button id="closeModal"
+            class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+
+    <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+
+    <!-- Email -->
+    <input type="email" placeholder="EMAIL ADDRESS*" required
+           class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+
+    <!-- Name -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" placeholder="FIRST NAME *" required
+             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+      <input type="text" placeholder="SURNAME *" required
+             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+    </div>
+
+    <!-- Contact and Market -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+        <option value="" class="text-gray-400">CONTACT NUMBER *</option>
+        <option>Uganda</option>
+        <option>Kenya</option>
+      </select>
+      <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+        <option value="">SELECT SERVICE</option>
+        <option>Laboratory Testing</option>
+        <option>Field Investigations</option>
+        <option>Equipment Hire</option>
+        <option>Training & Capacity Building</option>
+      </select>
+    </div>
+
+    <!-- Challenge -->
+    <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+              class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+
+    <!-- Consent -->
+    <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+      <span>I understand the privacy policy </span>
+    </label>
+    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+      </p>
+
+    <!-- Submit / Take me home -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <button type="submit"
+              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+        SEND
+      </button>
+      <button type="button"
+              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+        TAKE ME HOME
+      </button>
+    </div>
+  </div>
+</div>
+
+          <button id="menuToggle" class="md:hidden focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+  <!-- Overlay dropdown -->
+  <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-51 hidden">
+    <div class="bg-black text-white p-6 space-y-3 h-full w-[70%] text-lg left-0 border-r border-dotted border-gray-400/40">
+      <a href="#" class="block hover:text-gray-300">Home</a>
+      <a href="#" class="block hover:text-gray-300">About</a>
+      <a href="#" class="block hover:text-gray-300">Services</a>
+      <!--<hr class="border-gray-600">-->
+      <button class="border-gray-900 border-1 py-1 px-2 rounded-lg">
+        <a href="#" class="block hover:text-gray-300">Get a Quote</a></button>
+    </div>
+  </div><!--End of mobile dropdown-->
+
+
+  <!-- Hero section -->
+  <section class="relative h-100 w-full">
+    <!-- Image -->
+    <div class="absolute inset-0 bg-[url('/img/geophysical-investigations/3.JPG')] bg-cover bg-bottom"></div>
+    <!-- Gradient -->
+    <div class="absolute top-0 left-0 w-full h-2/5 bg-gradient-to-b from-black/90 to-transparent"></div>
+    <!--<div class="absolute inset-0 bg-black bg-opacity-60"></div>-->
+
+    <div class="relative flex items-center px-8 py-40 md:py-32">
+      <div class="text-white">
+        <h1 class="font-extrabold text-lg md:px-15 md:text-[70px] ">
+          Geophysical Investigations
+        </h1>
+      </div>
+    </div>
+
+    </section><!-- End of hero section-->
+
+  <section class="relative py-8 px-8 md:px-20 bg-[#0c0c0c]">
+    <div class="flex flex-col md:flex-row">
+    <!-- Sidebar -->
+    <aside class="w-full md:w-64 md:self-start md:sticky md:top-20 px-4">
+      <nav class="bg-gray-900 border border-gray-900 rounded overflow-hidden shadow">
+        <ul class="divide-y divide-gray-700 max-h-[calc(100vh-4rem)] overflow-y-auto">  
+          <li>
+            <a href="/soil-testing.html" class="block px-4 py-5 text-[15px] text-white text-center hover:bg-gray-800">
+              Soil Testing
+            </a>
+          </li>
+          <li>
+            <a href="/asphalt-testing.html" class="block px-4 py-5 text-[15px] text-white text-center hover:bg-gray-800">
+              Asphalt Testing
+            </a>
+          </li>
+          <li>
+            <a href="/concrete-aggregate-testing.html" class="block px-4 py-5 text-[15px] text-white text-center hover:bg-gray-800">
+              Concrete & Aggregate Testing
+            </a>
+          </li>
+          <li>
+            <a href="/chemical-testing.html" class="block px-4 py-5 text-[15px] text-white text-center hover:bg-gray-800">
+              Chemical Testing
+            </a>
+          </li>
+          <li>
+            <a href="/geotechnical-investigations" class="block px-4 py-5 text-[15px] text-white text-center hover:bg-gray-800">
+              Geotechnical Investigations          
+            </a>
+          </li>
+          <li>
+            <a href="/geophysical-investigations" class="block bg-gray-800 text-center py-5 relative">
+                <span class="absolute right-0 top-0 bottom-0 w-1 bg-[#14953D] rounded-r"></span>
+                <span class="text-[15px] text-white">Geophysical Investigations</span> 
+            </a>
+          </li>
+        </ul>
+    </nav>
+  </aside>
+  <!-- Content -->
+  <div class="flex-1 p-6 md:p-10">
+    <!--<h1 class="text-white text-3xl md:text-5xl font-extrabold mb-4 md:mb-6">Our soil testing services</h1>-->
+    <!--<h2 class="text-gray-400 text-base md:text-lg leading-relaxed ">
+      Our Geotechnical Investigation services assess stability, bearing capacity, and suitability for road and bridge construction projects.
+    </h2>-->
+
+    <p class="text-gray-400 pt-4 text-base">
+      These are a reasonable cost and time saving option for preliminary assessment of large sites.
+       They give information on sub-soil parameters. Like resistivity, seismicity, ground profiles & water
+        levels. They offer information on subsurface parameters such as;
+       Resistivity, Seismicity, Ground Strata profiling,Location of Ground water
+    </p>
+    
+    
+
+    <div class="items-center justify-between space-x-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 mt-6">
+        <div class="p-2 flex flex-col h-60">
+          <div class="w-full h-full bg-[url('/img/geophysical-investigations/1.JPG')] bg-cover bg-center"></div>
+        </div>
+        <div class="p-2 flex flex-col h-60">
+          <div class="w-full h-full bg-[url('/img/geophysical-investigations/2.JPG')] bg-cover bg-center"></div>
+        </div>
+       <div class="p-2 flex flex-col h-60">
+          <div class="w-full h-full bg-[url('/img/geophysical-investigations/3.JPG')] bg-cover bg-center"></div>
+        </div>
+        
+        
+      </div>
+    </div>
+
+  </div><!-- End of content section -->
+</div>
+</section>
+
+
+
+
+ <footer class="relative bg-black px-8 py-12 md:px-20">
+      <div class="flex flex-col lg:flex-row gap-2">
+        <!-- Left Side -->
+        <div class="w-full lg:w-[34%]">
+          <a href="index.html">
+            <img src="img/logo-on-dark.webp" alt="logo" class="h-9 w-auto mb-4" />
+          </a>
+
+          <h2 class="text-white text-[14px]">
+            Geotechnical Engineering and Technology <br />
+            Laboratory (GETLAB) Limited
+          </h2>
+          <p class="mt-4 text-[14px]">
+            Plot 1234, Block 197, Namirembe Hillside Road, <br />
+            Kitetika Cell<br />
+            Kasangati Town Council, Wakiso, Uganda<br />
+            +256 (0) 392 175 883<br>
+            info@getlab.co.ug
+          </p>
+        </div>
+
+        <!-- Right Side -->
+       <!-- Right Section -->
+  <div class="w-full lg:w-[66%]">
+    <div class="w-full h-72 lg:h-80">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.716709934078!2d32.587741673576765!3d0.4089131638805127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbc952b3a8f1%3A0xb6a5c2eaeb42c184!2sGETLAB%20LTD!5e0!3m2!1sen!2sug!4v1754395067576!5m2!1sen!2sug" 
+        class="w-full h-full border-0" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+      </div>
+      <hr class="mt-15 mb-8 border-gray-900">
+      <div class="text-left">&copy; 2025 <strong>GETLAB</strong></div>
+
+      <!-- Back to Top -->
+      <a href="#top" class="fixed bottom-5 right-5 bg-white text-green-600 p-2 rounded-full shadow-lg">
+        ↑
+      </a>
+    </footer>
+
+  
+  </body>
+</html>
