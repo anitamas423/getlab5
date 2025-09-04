@@ -9,6 +9,7 @@ export default defineConfig({
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { resolve } from "path"
 export default defineConfig({
   plugins: [react(), tailwindcss(),
   ],
@@ -23,5 +24,13 @@ export default defineConfig({
       '.loca.lt',          // allow localtunnel
       '.trycloudflare.com' // allow cloudflare tunnel
     ]
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "src/index.html"),
+        about: resolve(__dirname, "src/pages/about.html"),
+      },
+    },
   }
 })
