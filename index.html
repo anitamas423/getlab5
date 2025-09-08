@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="/src/styles.css" rel="stylesheet"/>
+    <link href="/styles.css" rel="stylesheet"/>
 
   </head>
   <body class="font-space dark:bg-black text-gray-400 min-h-screen relative sm:text-base">
     <div id="root"></div>
     
-    <script type="module" src="/src/js/main.js"></script>
-    <script type="module" src="/src/js/modal.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/modal.js"></script>
  
     <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-4 py-3 border-b border-dotted border-gray-400/40">
       <div class="mx-auto flex items-center justify-between">
@@ -23,7 +23,7 @@
           <a href="/"><img src="/img/logo-on-dark.webp" alt="logo" class="h-7 w-auto" /></a>
           <nav class="flex items-center space-x-4 hidden md:flex">
             <div><a href="/" class="nav-link hover:text-gray-300">Home</a></div>
-            <div><a href="/src/about.html" class="nav-link hover:text-gray-300">About Us</a></div>
+            <div><a href="/about.html" class="nav-link hover:text-gray-300">About Us</a></div>
             <div class="relative group">
                <button class="nav-link flex items-center gap-1 hover:text-gray-300">
                   Services
@@ -32,12 +32,12 @@
               </svg>
               </button>
               <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/src/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
-                <a href="/src/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
-                <a href="/src/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
-                <a href="/src/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
-                <a href="/src/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
-                <a href="/src/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
+                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
+                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
+                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
+                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
+                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
+                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
               </div> 
             </div>
             <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
@@ -68,82 +68,80 @@
         <div class="flex space-x-3">
           <nav class="flex items-center space-x-4">
            <div class="hidden md:flex"><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
-          <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
-            Get a Quotation
-            <span class="text-white rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </span>
+            <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+              Get a Quotation
+              <span class="text-white rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </span>
             </button> 
           </nav>
-          <div id="modalOverlay"
-     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div id="modalOverlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
 
-  <!-- Modal Content -->
-  <div id="modalContent"
-       class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
-              max-h-[90vh] overflow-y-auto">
+          <!-- Modal Content -->
+          <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+                      max-h-[90vh] overflow-y-auto">
     
-    <!-- Close Button -->
-    <button id="closeModal"
-            class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+          <!-- Close Button -->
+          <button id="closeModal"
+                  class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
 
-    <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+          <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
 
-    <!-- Email -->
-    <input type="email" placeholder="EMAIL ADDRESS*" required
-           class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+          <!-- Email -->
+          <input type="email" placeholder="EMAIL ADDRESS*" required
+                class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
 
-    <!-- Name -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <input type="text" placeholder="FIRST NAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-      <input type="text" placeholder="SURNAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-    </div>
+          <!-- Name -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="FIRST NAME *" required
+                  class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+            <input type="text" placeholder="SURNAME *" required
+                  class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+          </div>
 
-    <!-- Contact and Market -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="" class="text-gray-400">CONTACT NUMBER *</option>
-        <option>Uganda</option>
-        <option>Kenya</option>
-      </select>
-      <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="">SELECT SERVICE</option>
-        <option>Laboratory Testing</option>
-        <option>Field Investigations</option>
-        <option>Equipment Hire</option>
-        <option>Training & Capacity Building</option>
-      </select>
-    </div>
+          <!-- Contact and Market -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              <option value="" class="text-gray-400">CONTACT NUMBER *</option>
+              <option>Uganda</option>
+              <option>Kenya</option>
+            </select>
+            <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              <option value="">SELECT SERVICE</option>
+              <option>Laboratory Testing</option>
+              <option>Field Investigations</option>
+              <option>Equipment Hire</option>
+              <option>Training & Capacity Building</option>
+            </select>
+          </div>
 
-    <!-- Challenge -->
-    <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
-              class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+          <!-- Challenge -->
+          <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+                    class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
 
-    <!-- Consent -->
-    <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
-      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
-      <span>I understand the privacy policy </span>
-    </label>
-    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
-      </p>
+          <!-- Consent -->
+          <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+            <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+            <span>I understand the privacy policy </span>
+          </label>
+          <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+            </p>
 
-      <!-- Submit / Take me home -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <button type="submit"
-                class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-          SEND
-          </button>
-          <button type="button"
-                  class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-            TAKE ME HOME
-          </button>
-      </div>
-      </div>
-    </div>
+            <!-- Submit / Take me home -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <button type="submit"
+                      class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                SEND
+                </button>
+                <button type="button"
+                        class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  TAKE ME HOME
+                </button>
+            </div>
+            </div>
+          </div>
 
           <button id="menuToggle" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -161,12 +159,12 @@
       <a href="#" class="block hover:text-gray-300">About Us</a>
       <a href="#" class="block hover:text-gray-300">Services</a>
       <!--<a href="#" class="block hover:text-gray-300">Projects</a>-->
-       <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
-    Projects
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </a>
+      <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
+        Projects
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
 
   <!-- Mobile -->
   <div class="mt-2 space-y-1 block md:hidden">
@@ -186,7 +184,7 @@
     <section class="relative h-136 w-full">
       <!-- Image -->
       <div>
-      <div class="absolute inset-0 bg-[url('public/img/getlab-premises.jpg')] bg-cover bg-center"></div>
+      <div class="absolute inset-0 bg-[url('/img/getlab-premises.jpg')] bg-cover bg-center"></div>
       <!-- Overlay -->
       <!--<div class="absolute inset-0 bg-gray bg-opacity-90 z-0"></div>
       Gradient -->
@@ -260,16 +258,16 @@
           </div>
           <!-- Right grid (services) -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:my-12 mb-4">
-            <a href="/services/soil-testing" class="hover:bg-[#1493D5]/10">
+            <a href="/services/soil-testing" class="hover:bg-[#1493D5]/50">
               <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70 text-white font-extrabold uppercase">
                 Soil Testing</div>
             </a> 
-            <a href="/services/asphalt-testing" class="hover:bg-[#3B3B3B]/10">
-              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/60 text-center font-extrabold uppercase">
+            <a href="/services/asphalt-testing" class="hover:bg-[#1493D5]/50">
+              <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70 text-center font-extrabold uppercase">
                 Asphalt Testing
               </div>
             </a>  
-            <a href="/services/concrete-aggregate-testing" class="hover:bg-[#14953D]/10">
+            <a href="/services/concrete-aggregate-testing" class="hover:bg-[#14953D]/50">
               <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
                 Concrete & Aggregate Testing
               </div>
@@ -279,12 +277,12 @@
                 Chemical Testing
               </div>
             </a>
-            <a href="/services/geotechnical-investigations" class="hover:bg-[#14953D]/40">
+            <a href="/services/geotechnical-investigations" class="hover:bg-[#14953D]/50">
               <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
                 Geotechnical Investigations
               </div>
             </a>
-            <a href="/services/geophysical-investigations" class="hover:bg-[#14953D]/40">
+            <a href="/services/geophysical-investigations" class="hover:bg-[#14953D]/50">
               <div class="h-30 text-xl flex items-center justify-center bg-[#14953D]/70  text-center font-extrabold uppercase">
                 Geophysical Investigations
               </div>
@@ -334,7 +332,7 @@
     <a href="/projects/bridges.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
       <div class="absolute inset-0 bg-[url('/img/bridges-cover.jpeg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
       <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-      <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/40 via-black/5 to-transparent"></div>
+      <!--<div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/40 via-black/5 to-transparent"></div>-->
       <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
         <span class="text-lg font-semibold">Bridges</span>
         <div class="p-2 border border-white">
@@ -350,7 +348,7 @@
   <a href="/projects/buildings.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
     <div class="absolute inset-0 bg-[url('/img/buildings-cover.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-    <div class="absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-black/30 to-transparent"></div>
+    <!--<div class="absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-black/70 to-transparent"></div>-->
     <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
       <span class="text-lg font-semibold">Buildings</span>
       <div class="p-2 border border-white">
@@ -361,9 +359,9 @@
     </div>
   </a>
   <a href="/projects/dams.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
-    <div class="absolute inset-0 bg-[url('/img/dams1.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
+    <div class="absolute inset-0 bg-[url('/img/dams.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-    <div class="absolute top-0 left-0 h-full w-2/5 bg-gradient-to-r from-black/30 via-black/5 to-transparent"></div>
+    <!--<div class="absolute top-0 left-0 h-full w-2/5 bg-gradient-to-r from-black/30 via-black/5 to-transparent"></div>-->
     <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
       <span class="text-lg font-semibold">Dams</span>
       <div class="p-2 border border-white">
@@ -376,7 +374,7 @@
   <a href="/projects/water-projects.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
     <div class="absolute inset-0 bg-[url('/img/water-cover.jpeg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-    <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/30 to-transparent"></div>
+    <!--<div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/30 to-transparent"></div>-->
     <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
       <span class="text-lg font-semibold">Water</span>
       <div class="p-2 border border-white">
@@ -395,7 +393,7 @@
     
   <!-- Customer Section -->
     <section class="relative w-full">
-        <p class="text-center pt-6 pb-2">Trusted by 50+ companies</p>
+        <p class="text-center pt-8 pb-2">Trusted by 50+ companies</p>
       
       <div class="slider-wrapper overflow-hidden relative">
         <!-- Left gradient mask -->
@@ -404,21 +402,21 @@
         <div class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black/90 to-transparent z-10"></div>
         <div class="animate-slide flex gap-16 items-center">
           <img src="/img/clients/1.png" alt="Client 1" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/2.png" alt="Client 2" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/3.png" alt="Client 3" class="h-20 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/4.png" alt="Client 4" class="h-14 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/5.png" alt="Client 5" class="h-16  grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/6.png" alt="Client 6" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/7.png" alt="Client 7" class="h-20 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/8.png" alt="Client 8" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/9.png" alt="Client 9" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/10.png" alt="Client 10" class="h-20 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/11.png" alt="Client 11" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
-          <img src="/img/clients/12.png" alt="Client 12" class="h-12 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
-          <img src="/img/clients/13.png" alt="Client 13" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
-          <img src="/img/clients/14.png" alt="Client 14" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
-          <img src="/img/clients/15.png" alt="Client 15" class="h-20 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
-          <img src="/img/clients/16.png" alt="Client 16" class="h-16 grayscale invert opacity-60 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/2.png" alt="Client 2" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/3.png" alt="Client 3" class="h-20 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/4.png" alt="Client 4" class="h-14 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/5.png" alt="Client 5" class="h-16  grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/6.png" alt="Client 6" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/7.png" alt="Client 7" class="h-20 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/8.png" alt="Client 8" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/9.png" alt="Client 9" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/10.png" alt="Client 10" class="h-20 grayscale invert opacity-99 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/11.png" alt="Client 11" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
+          <img src="/img/clients/12.png" alt="Client 12" class="h-12 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/13.png" alt="Client 13" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/14.png" alt="Client 14" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/15.png" alt="Client 15" class="h-20 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/16.png" alt="Client 16" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/17.png" alt="Client 17" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/18.png" alt="Client 18" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/19.png" alt="Client 19" class="h-16 grayscale invert opacity-90 hover:opacity-100 transition duration-300" />
@@ -436,6 +434,7 @@
           <img src="/img/clients/31.png" alt="Client 31" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/32.png" alt="Client 32" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/33.png" alt="Client 33" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/34.png" alt="Client 34" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/1.png" alt="Client 1" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" /> 
           <img src="/img/clients/2.png" alt="Client 2" class="h-16 w-36 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
           <img src="/img/clients/3.png" alt="Client 3" class="h-20 w-32 grayscale invert opacity-90 hover:opacity-100 transition duration-300" /> 
@@ -469,6 +468,7 @@
           <img src="/img/clients/31.png" alt="Client 31" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/32.png" alt="Client 32" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
           <img src="/img/clients/33.png" alt="Client 33" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
+          <img src="/img/clients/34.png" alt="Client 34" class="h-16 grayscale invert opacity-95 hover:opacity-100 transition duration-300" />
         </div>
       </div> 
     </section><!-- End of customer section -->
@@ -478,21 +478,27 @@
       <div class="flex flex-col lg:flex-row gap-2">
         <!-- Left Side -->
         <div class="w-full lg:w-[34%]">
-          <a href="index.html">
-            <img src="img/logo-on-dark.webp" alt="logo" class="h-9 w-auto mb-4" />
+          <a href="/">
+            <img src="/img/logo-on-dark.webp" alt="logo" class="h-9 w-auto mb-4" />
           </a>
 
-          <h2 class="text-white text-[14px]">
+          <h2 class="text-white text-[14px] mb-4">
             Geotechnical Engineering and Technology <br />
             Laboratory (GETLAB) Limited
           </h2>
-          <p class="mt-4 text-[14px]">
-            Plot 1234, Block 197, Namirembe Hillside Road, <br />
-            Kitetika Cell<br />
-            Kasangati Town Council, Wakiso, Uganda<br />
-            +256 (0) 392 175 883<br>
-            info@getlab.co.ug
+          <p class="text-[14px] mb-1">
+            Plot 1234, Block 197, Namirembe Hillside Road, 
           </p>
+          <p class="text-[14px] mb-1">Kitetika Cell</p>
+          <p class="text-[14px] mb-1">Kasangati Town Council, Wakiso, Uganda</p>
+          <p>
+            <a href="tel:+256392175883" class="text-[14px] mb-1 hover:text-white transition">
+              +256 (0) 392 175 883
+            </a>
+          </p>
+            <a href="mailto:getlab.co.ug" class="text-[14px] mb-1 hover:text-white transition">
+              info@getlab.co.ug
+            </a> 
         </div>
 
         <!-- Right Side -->
