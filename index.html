@@ -14,8 +14,9 @@
     
     <script type="module" src="/src/js/main.js"></script>
     <script type="module" src="/src/js/modal.js"></script>
- 
-    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-4 py-3 border-b border-dotted border-gray-400/40">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    
+   <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-4 md:px-15 py-3 border-b border-dotted border-gray-400/40">
       <div class="mx-auto flex items-center justify-between">
         <!-- Logo -->
         <!-- Left Navigation Links -->
@@ -31,13 +32,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
-                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
-                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
-                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
-                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
-                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
+              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil Testing</a>
+                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt Testing</a>
+                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate Testing</a>
+                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical Testing</a>
+                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical Investigations</a>
+                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical Investigations</a>
               </div> 
             </div>
             <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
@@ -50,13 +51,13 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission lines & Substations</a>
-                <a href="/projects/road-projects.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission Lines & Substations</a>
+                <a href="/projects/roads.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
                 <a href="/projects/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
                 <a href="/projects/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
-                <a href="/projects/dams.html" class="block px-4 py-2 hover:text-gray-300">Dams</a>
-                <a href="/projects/water-projects.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+                <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams & HPP</a>
+                <a href="/projects/water.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
                 
               </div>
             </div>
@@ -66,89 +67,83 @@
 
         <!-- Right Navigation Links -->
         <div class="flex space-x-3">
-          <nav class="flex items-center space-x-4">
-           <div class="hidden md:flex"><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
-            <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+          <nav class="flex items-center space-x-8">
+            <div class="hidden md:flex"><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
+            <a href="#" class="openModal flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
               Get a Quotation
               <span class="text-white rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
               </span>
-            </button> 
+            </a> 
           </nav>
-          <div id="modalOverlay" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div id="modalOverlay" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+                        max-h-[90vh] overflow-y-auto">
+      
+              <!-- Close Button -->
+              <button id="closeModal"
+                      class="absolute top-3 right-3 hover:text-gray-200 text-2xl">&times;</button>
 
-          <!-- Modal Content -->
-          <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
-                      max-h-[90vh] overflow-y-auto">
-    
-          <!-- Close Button -->
-          <button id="closeModal"
-                  class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+              <h2 class="text-2xl text-gray-200 font-semibold text-center">Provide us a few details</h2>
 
-          <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+              <!-- Email -->
+              <input type="email" placeholder="EMAIL ADDRESS*" required
+                    class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
 
-          <!-- Email -->
-          <input type="email" placeholder="EMAIL ADDRESS*" required
-                class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              <!-- Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="FIRST NAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <input type="text" placeholder="SURNAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              </div>
 
-          <!-- Name -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="FIRST NAME *" required
-                  class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-            <input type="text" placeholder="SURNAME *" required
-                  class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-          </div>
+              <!-- Contact and Market -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input id="phone" type="tel" 
+        placeholder="ENTER PHONE NUMBER *" required
+        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <select class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                  <option value="" disabled selected hidden>SELECT SERVICE</option>
+                  <option>Laboratory Testing</option>
+                  <option>Field Investigations</option>
+                  <option>Equipment Hire</option>
+                  <option>Training & Capacity Building</option>
+                </select>
+              </div>
 
-          <!-- Contact and Market -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-              <option value="" class="text-gray-400">CONTACT NUMBER *</option>
-              <option>Uganda</option>
-              <option>Kenya</option>
-            </select>
-            <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-              <option value="">SELECT SERVICE</option>
-              <option>Laboratory Testing</option>
-              <option>Field Investigations</option>
-              <option>Equipment Hire</option>
-              <option>Training & Capacity Building</option>
-            </select>
-          </div>
+              <!-- Challenge -->
+              <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+                        class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
 
-          <!-- Challenge -->
-          <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
-                    class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+              <!-- Consent -->
+              <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+                <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+                <span>I understand the privacy policy </span>
+              </label>
+              <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+                </p>
 
-          <!-- Consent -->
-          <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
-            <input type="checkbox" class="h-4 w-4 text-[#14953D]">
-            <span>I understand the privacy policy </span>
-          </label>
-          <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
-            </p>
-
-            <!-- Submit / Take me home -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <button type="submit"
-                      class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-                SEND
+              <!-- Submit / Take me home -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button type="submit" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  SEND
                 </button>
-                <button type="button"
-                        class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                <button type="button" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
                   TAKE ME HOME
                 </button>
-            </div>
-            </div>
-          </div>
+              </div>
+            </div><!-- End of Modal Content -->
+          </div><!-- End of Modal Overlay -->
 
           <button id="menuToggle" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
-        </div>
+        </div><!-- End of Right Navigation Links -->
       </div>
     </header>
 
@@ -190,10 +185,7 @@
       Gradient -->
       <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent dark:from-black/99 z-10"></div>
       <!--<div class="absolute inset-0 bg-gradient-to-r from-black via-gray to-transparent dark:from-black/99"></div>-->
-    
-
-      <!-- Content of hero section-->
-      
+      <!-- Content of hero section-->  
       <div class="relative z-10 flex items-center h-100 px-4 pt-8 md:px-24">
         <div class="text-white max-w-2xl">
           <h1 class="font-hero mt-13 text-4xl md:text-5xl leading-tight">
@@ -202,17 +194,17 @@
             ENGINEERING LABORATORY
           </h1>
           <p class="mt-6 text-[17px]">With modern, fully equipped facilities, we handle projects of any scale. Our team is defined by relentless focus, fast execution, and a deep commitment to quality.</p>
-          <a href="#" class="inline-flex items-center mt-8 px-6 py-2 bg-[#14953D] text-black/80 font-semibold shadow hover:bg-[#14953D]/90 transition">
+          <a href="#" class="openModal inline-flex items-center mt-8 px-6 py-2 bg-[#14953D] text-black/80 font-semibold shadow hover:bg-[#14953D]/90 transition">
               Get a quotation
              <span class="text-black/80 ml-1 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
               </svg>
             </span>
-          </a>
-          </div>
+          </a>  
         </div>
-      </section><!-- End of hero section-->
+      </div>
+    </section><!-- End of hero section-->
 
     <!--Statistics section-->
     <section class="relative h-full py-8 px-4 md:px-24 bg-[#121212]">
@@ -220,22 +212,26 @@
         <h1 class="text-4xl text-white font-bold mb-5">Committed to <span class="text-[#14953D]">excellence</span> since <span class="text-[#14953D]">2014</span></h1>
         <p class="text-[#F2F2F2]/70 mt-2">Geotechnical Engineering and Technology Laboratory (GETLAB) Limited has, over the past 10 years, been shaped by the practices and principles that distinguish world-class engineering labs from the rest.</p>
     
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
-          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid p-4 flex flex-col h-40">
-            <h1 class="text-white font-bold text-5xl pt-4 px-2">1550+</h1>
-            <p class="mt-2 px-2">Completed & approved projects</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-6">
+          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid px-2 p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold md:text-3xl pt-4 md:px-[1px] sm:px-2 text-5xl">2000+</h1>
+            <p class="mt-2 md:px-[1px] sm:px-2">Completed & approved projects</p>
           </div>
-          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid p-4 flex flex-col h-40">
-            <h1 class="text-white font-bold text-5xl pt-4 px-2">10+</h1>
-            <p class="mt-2 px-2">Years of experience</p>
+          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid px-2 p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold md:text-3xl pt-4 md:px-[1px] sm:px-2 text-5xl">10+</h1>
+            <p class="mt-2 md:px-[1px] sm:px-2">Years of experience</p>
           </div>
-          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid p-4 flex flex-col h-40">
-            <h1 class="text-white font-bold text-5xl pt-4 px-2">100+</h1>
-            <p class="mt-2 px-2">Returning customers</p>
+          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid px-2 p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold md:text-3xl pt-4 md:px-[1px] sm:px-2 text-5xl">200+</h1>
+            <p class="mt-2 md:px-[1px] sm:px-2">Returning customers</p>
           </div>
-          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid p-4 flex flex-col h-40">
-            <h1 class="text-white font-bold text-5xl pt-4 px-2">Certified</h1>
-            <p class="mt-2 px-2">ISO/IEC 17025 (KENAS)</p>
+          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid px-2 p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold md:text-3xl pt-4 md:px-[1px] sm:px-2 text-5xl">Accredited</h1>
+            <p class="mt-2 md:px-[1px] sm:px-2">ISO/IEC 17025 (KENAS)</p>
+          </div>
+          <div class="rounded-[30px] bg-black border border-[#2c2f33] bg-grid px-2 p-4 flex flex-col h-40">
+            <h1 class="text-white font-bold md:text-3xl pt-4 md:px-[1px] sm:px-2 text-5xl">Implementing</h1>
+            <p class="mt-2 md:px-[1px] sm:px-2">ISO/IEC 9001</p>
           </div>
         </div>
     </section><!-- End of statistics section -->
@@ -298,14 +294,14 @@
     <h1 class="text-4xl font-bold pb-8 px-8 md:px-24">Projects</h1>
     <!--<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 px-8 md:px-20 gap-2">-->
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-8 md:px-24 auto-rows-[450px]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 sm:px-8 md:px-24 auto-rows-[350px] md:auto-rows-[450px]">
     <!-- Row 1: wide card spanning all 3 cols -->
     <a href="/projects/transmissions-substations.html" class="col-span-1 sm:col-span-2 lg:col-span-3 relative group overflow-hidden border-l border-t border-r border-[#2c2f33]">
       <div class="absolute inset-0 bg-[url('/img/eacop-pipeline.jpeg')] bg-cover bg-top transition-transform duration-500 group-hover:scale-110"></div>
       <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
       <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/95 to-transparent"></div>
        <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
-        <span class="text-lg font-semibold">Transmission lines & Substations</span>
+        <span class="text-lg font-semibold">Transmission Lines & Substations</span>
         <div class="p-2 border border-white">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -314,7 +310,7 @@
       </div>
     </a>
     <!-- Row 2: wide card spanning all 2 cols -->
-    <a href="/projects/road-projects.html" class="col-span-2 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+    <a href="/projects/roads.html" class="col-span-2 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
       <div class="absolute inset-0 bg-[url('/img/kyenjojo-fortportal-road.jpg')] bg-cover bg-top transition-transform duration-500 group-hover:scale-110"></div>
       <!--<img src="bg-[url('/img/eacop-pipeline.jpeg')" alt="" class="absolute inset-0 w-full h-full object-cover">-->
       <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
@@ -332,7 +328,7 @@
     <a href="/projects/bridges.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
       <div class="absolute inset-0 bg-[url('/img/bridges-cover.jpeg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
       <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-      <!--<div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/40 via-black/5 to-transparent"></div>-->
+      <div class="absolute top-0 left-0 h-full w-2/3 bg-gradient-to-r from-black/40 to-transparent"></div>
       <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
         <span class="text-lg font-semibold">Bridges</span>
         <div class="p-2 border border-white">
@@ -344,11 +340,10 @@
     </a>
 
   <!-- Row 3: 3 small cards -->
- 
   <a href="/projects/buildings.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
     <div class="absolute inset-0 bg-[url('/img/buildings-cover.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-    <!--<div class="absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-black/70 to-transparent"></div>-->
+    <div class="absolute top-0 left-0 h-full w-2/3 bg-gradient-to-r from-black/40 to-transparent"></div>
     <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
       <span class="text-lg font-semibold">Buildings</span>
       <div class="p-2 border border-white">
@@ -358,10 +353,10 @@
       </div>
     </div>
   </a>
-  <a href="/projects/dams.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+  <a href="/projects/dams-hpp.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
     <div class="absolute inset-0 bg-[url('/img/dams.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-    <!--<div class="absolute top-0 left-0 h-full w-2/5 bg-gradient-to-r from-black/30 via-black/5 to-transparent"></div>-->
+    <div class="absolute top-0 left-0 h-full w-2/3 bg-gradient-to-r from-black/40 to-transparent"></div>
     <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
       <span class="text-lg font-semibold">Dams</span>
       <div class="p-2 border border-white">
@@ -371,10 +366,10 @@
       </div>
     </div>
   </a>
-  <a href="/projects/water-projects.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
+  <a href="/projects/water.html" class="col-span-1 group relative overflow-hidden border-l border-t border-r border-[#2c2f33]">
     <div class="absolute inset-0 bg-[url('/img/water-cover.jpeg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"></div>
     <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition duration-500"></div>
-    <!--<div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/30 to-transparent"></div>-->
+    <div class="absolute top-0 left-0 h-full w-2/3 bg-gradient-to-r from-black/40 to-transparent"></div>
     <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
       <span class="text-lg font-semibold">Water</span>
       <div class="p-2 border border-white">
@@ -523,6 +518,25 @@
         ↑
       </a>-->
     </footer>
-  
+    
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.querySelector("#phone");
+  const iti = window.intlTelInput(input, {
+    initialCountry: "ug",
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+    formatOnDisplay: true, // formats number on display
+    nationalMode: false,   // show full international number
+    separateDialCode: true // shows dial code separately
+  });
+
+  // Add country name next to flag in dropdown
+  const dropdown = input.parentNode.querySelector(".iti__flag-container");
+  input.addEventListener('countrychange', function() {
+    const countryData = iti.getSelectedCountryData();
+    dropdown.setAttribute("title", countryData.name + " (" + countryData.dialCode + ")");
+  });
+});
+</script>
   </body>
 </html>
