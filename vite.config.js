@@ -25,14 +25,4 @@ export default defineConfig({
       '.trycloudflare.com' // allow cloudflare tunnel
     ]
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "src/about.html"),
-        soil: resolve(__dirname, "src/services/soil-testing.html"),
-        asphalt: resolve(__dirname, "src/services/asphalt-testing.html"),
-      },
-    },
-  }
 })
