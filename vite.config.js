@@ -33,11 +33,6 @@ export default defineConfig({
         soil: resolve(__dirname, "src/services/soil-testing.html"),
         asphalt: resolve(__dirname, "src/services/asphalt-testing.html"),
       },
-      output: {
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]',
-      },
     },
   }
 })
