@@ -13,7 +13,7 @@ import { resolve } from "path"
 export default defineConfig({
   plugins: [react(), tailwindcss(),
   ],
-  root: 'src', // if your entry HTML/JS is in src/
+ /* root: 'src', // if your entry HTML/JS is in src/
   publicDir: '../public', // static assets
   build: {
     outDir: '../dist', // output at project root
@@ -25,5 +25,15 @@ export default defineConfig({
         // add other pages as needed
       }
     }
+  }*/
+   build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "src/about.html"),
+        soil: resolve(__dirname, "src/services/soil-testing.html"),
+        asphalt: resolve(__dirname, "src/services/asphalt-testing.html"),
+      },
+    },
   }
 });
