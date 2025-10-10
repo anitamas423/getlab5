@@ -23,7 +23,7 @@ export default defineConfig({
         main: 'index.html',
         about: 'src/about.html',
         // add other pages as needed
-      },
-    },
+      }
+    }
   }
 });
