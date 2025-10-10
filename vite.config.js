@@ -13,4 +13,17 @@ import { resolve } from "path"
 export default defineConfig({
   plugins: [react(), tailwindcss(),
   ]
+  root: 'src', // if your entry HTML/JS is in src/
+  publicDir: '../public', // static assets
+  build: {
+    outDir: '../dist', // output at project root
+    rollupOptions: {
+      // customize rollup if needed
+      input: {
+        main: 'index.html',
+        about: 'src/about.html',
+        // add other pages as needed
+      }
+    }
+  }
 })
