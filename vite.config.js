@@ -33,5 +33,6 @@ export default defineConfig({
         soil: resolve(__dirname, "src/services/soil-testing.html"),
         asphalt: resolve(__dirname, "src/services/asphalt-testing.html"),
       },
-
+   },
+  }
 })
