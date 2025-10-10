@@ -12,27 +12,5 @@ import tailwindcss from '@tailwindcss/vite'
 import { resolve } from "path"
 export default defineConfig({
   plugins: [react(), tailwindcss(),
-  ],
-  server: {
-    host: true,     // allow LAN/0.0.0.0 access
-    port: 5173,     // fixed port
-    strictPort: true, // if 5173 is taken, don't auto-switch
-    allowedHosts: [
-      'localhost',
-      '127.0.0.1',
-      '.ngrok-free.app',   // allow ngrok tunnel
-      '.loca.lt',          // allow localtunnel
-      '.trycloudflare.com' // allow cloudflare tunnel
-    ]
-  },
-   build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "src/about.html"),
-        soil: resolve(__dirname, "src/services/soil-testing.html"),
-        asphalt: resolve(__dirname, "src/services/asphalt-testing.html"),
-      },
-   },
-  }
+  ]
 })
