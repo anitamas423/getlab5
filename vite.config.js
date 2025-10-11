@@ -33,7 +33,7 @@ export default defineConfig({
         about: resolve(__dirname, "src/about.html"),
         soil: resolve(__dirname, "src/services/soil-testing.html"),
         asphalt: resolve(__dirname, "src/services/asphalt-testing.html"),
-        concrete: resolve(__dirname, "src/services/concrete-aggregate-testing.html"),
+        /*concrete: resolve(__dirname, "src/services/concrete-aggregate-testing.html"),
         chemical: resolve(__dirname, "src/services/chemical-testing.html"),
         geotechnical: resolve(__dirname, "src/services/geotechnical-investigations.html"),
         geophysical: resolve(__dirname, "src/services/geophysical-investigations.html"),
@@ -42,7 +42,7 @@ export default defineConfig({
         bridges: resolve(__dirname, "src/projects/bridges.html"),
         buildings: resolve(__dirname, "src/projects/buildings.html"),
         dams: resolve(__dirname, "src/projects/dams-hpp.html"),
-        water: resolve(__dirname, "src/projects/water.html"),
+        water: resolve(__dirname, "src/projects/water.html"),*/
       },
     },
   }
