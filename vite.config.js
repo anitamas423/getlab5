@@ -37,12 +37,12 @@ export default defineConfig({
         chemical: resolve(__dirname, "src/services/chemical-testing.html"),
         geotechnical: resolve(__dirname, "src/services/geotechnical-investigations.html"),
         geophysical: resolve(__dirname, "src/services/geophysical-investigations.html"),
-        /*transmissions: resolve(__dirname, "src/projects/transmissions-substations.html"),
+        transmissions: resolve(__dirname, "src/projects/transmissions-substations.html"),
         roads: resolve(__dirname, "src/projects/roads.html"),
         bridges: resolve(__dirname, "src/projects/bridges.html"),
         buildings: resolve(__dirname, "src/projects/buildings.html"),
         dams: resolve(__dirname, "src/projects/dams-hpp.html"),
-        water: resolve(__dirname, "src/projects/water.html"),*/
+        water: resolve(__dirname, "src/projects/water.html"),
       },
     },
   }
