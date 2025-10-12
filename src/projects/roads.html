@@ -2,19 +2,22 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="#" href="#" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="../styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
   </head>
   <body class="font-space dark:bg-black text-gray-400 min-h-screen relative sm:text-base">
     <div id="root"></div>
     
     <script type="module" src="../js/main.js"></script>
-    <script type="module" src="../js/modal.js"></script>
-    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-8 py-3 border-b border-dotted border-gray-400/40">
+    <script type="module" src="../js/contact-modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+ 
+    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-4 md:px-15 py-3 border-b border-dotted border-gray-400/40">
       <div class="mx-auto flex items-center justify-between">
         <!-- Logo -->
         <!-- Left Navigation Links -->
@@ -30,14 +33,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/services/soil-testing" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
-                <a href="/services/asphalt-testing" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
-                <a href="/services/concrete-aggregate-testing" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
-                <a href="/services/chemical-testing" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
-                <a href="/services/geotechnical-investigations" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
-                <a href="/services/geophysical-investigations" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
-              </div>
+              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil Testing</a>
+                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt Testing</a>
+                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate Testing</a>
+                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical Testing</a>
+                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical Investigations</a>
+                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical Investigations</a>
+              </div> 
             </div>
             <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
 
@@ -49,120 +52,115 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission lines & Substations</a>
-                <a href="/projects/road-projects.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission Lines & Substations</a>
+                <a href="/projects/roads.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
                 <a href="/projects/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
                 <a href="/projects/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
-                <a href="/projects/dams.html" class="block px-4 py-2 hover:text-gray-300">Dams</a>
-                <a href="/projects/water-projects.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+                <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams & HPP</a>
+                <a href="/projects/water.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
                 
               </div>
             </div>
 
-            <div><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
           </nav>
         </div>
 
         <!-- Right Navigation Links -->
         <div class="flex space-x-3">
-          <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
-            Get a Quotation
-            <span class="text-white rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </span>
-            </button> 
-          <div id="modalOverlay"
-     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <nav class="flex items-center space-x-8">
+            <div class="hidden md:flex"><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
+            <a href="#" class="openModal flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+              Get a Quotation
+              <span class="text-white rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </span>
+            </a> 
+          </nav>
+          <div id="modalOverlay" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+                        max-h-[90vh] overflow-y-auto">
+      
+              <!-- Close Button -->
+              <button id="closeModal"
+                      class="absolute top-3 right-3 hover:text-gray-200 text-2xl">&times;</button>
 
-  <!-- Modal Content -->
-  <div id="modalContent"
-       class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
-              max-h-[90vh] overflow-y-auto">
-    
-    <!-- Close Button -->
-    <button id="closeModal"
-            class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+              <h2 class="text-2xl text-gray-200 font-semibold text-center">Provide us a few details</h2>
 
-    <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+              <!-- Email -->
+              <input type="email" placeholder="EMAIL ADDRESS*" required
+                    class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
 
-    <!-- Email -->
-    <input type="email" placeholder="EMAIL ADDRESS*" required
-           class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              <!-- Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="FIRST NAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <input type="text" placeholder="SURNAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              </div>
 
-    <!-- Name -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <input type="text" placeholder="FIRST NAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-      <input type="text" placeholder="SURNAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-    </div>
+              <!-- Contact and Market -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input id="phone" type="tel" 
+        placeholder="ENTER PHONE NUMBER *" required
+        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <select class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                  <option value="" disabled selected hidden>SELECT SERVICE</option>
+                  <option>Laboratory Testing</option>
+                  <option>Field Investigations</option>
+                  <option>Equipment Hire</option>
+                  <option>Training & Capacity Building</option>
+                </select>
+              </div>
 
-    <!-- Contact and Market -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="" class="text-gray-400">CONTACT NUMBER *</option>
-        <option>Uganda</option>
-        <option>Kenya</option>
-      </select>
-      <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="">SELECT SERVICE</option>
-        <option>Laboratory Testing</option>
-        <option>Field Investigations</option>
-        <option>Equipment Hire</option>
-        <option>Training & Capacity Building</option>
-      </select>
-    </div>
+              <!-- Challenge -->
+              <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+                        class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
 
-    <!-- Challenge -->
-    <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
-              class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+              <!-- Consent -->
+              <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+                <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+                <span>I understand the privacy policy </span>
+              </label>
+              <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+                </p>
 
-    <!-- Consent -->
-    <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
-      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
-      <span>I understand the privacy policy </span>
-    </label>
-    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
-      </p>
-
-    <!-- Submit / Take me home -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <button type="submit"
-              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-        SEND
-      </button>
-      <button type="button"
-              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-        TAKE ME HOME
-      </button>
-    </div>
-  </div>
-</div>
+              <!-- Submit / Take me home -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button type="submit" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  SEND
+                </button>
+                <button type="button" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  TAKE ME HOME
+                </button>
+              </div>
+            </div><!-- End of Modal Content -->
+          </div><!-- End of Modal Overlay -->
 
           <button id="menuToggle" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
-        </div>
+        </div><!-- End of Right Navigation Links -->
       </div>
     </header>
-      <!-- Overlay dropdown -->
+
+  <!-- Overlay dropdown -->
   <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-51 hidden">
     <div class="bg-black text-white p-6 space-y-3 h-full w-[70%] text-lg left-0 border-r border-dotted border-gray-400/40">
       <a href="#" class="block hover:text-gray-300">Home</a>
       <a href="#" class="block hover:text-gray-300">About Us</a>
       <a href="#" class="block hover:text-gray-300">Services</a>
       <!--<a href="#" class="block hover:text-gray-300">Projects</a>-->
-       <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
-    Projects
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </a>
+      <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
+        Projects
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
 
   <!-- Mobile -->
   <div class="mt-2 space-y-1 block md:hidden">
@@ -177,81 +175,72 @@
         <a href="#" class="block hover:text-gray-300">Get a Quote</a></button>
     </div>
   </div><!--End of mobile dropdown-->
-  <!-- Hero section -->
-  <!--<section class="relative h-90 w-full">
-   
-    <div class="absolute inset-0 bg-[url('/img/natural-moisture-content.jpg')] bg-cover bg-center"></div>
-    < Gradient 
-    <<div class="absolute inset-0 bg-gradient-to-r from-black to-transparent dark:from-black/98"></div>-->
-    <!--<div class="absolute inset-0 bg-black bg-opacity-60"></div>-->
 
-  <!--/section> End of hero section-->
-
-  <section class="bg-[#121212] text-white px-8 md:px-20 pt-12">
-    <h1 class="text-4xl font-bold mb-8">Featured projects</h1>
+  <section class="bg-[#121212] text-white px-8 md:px-24 pt-12">
+    <h1 class="text-2xl font-bold mb-4">Featured road projects</h1>
    
- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <!-- Card 1 -->
-  <div class="relative h-[400px] bg-[url('/img/kyenjojo-fortportal-road.jpg')] bg-cover bg-center overflow-hidden border-t border-l border-r border-[#2c2f33]">
-    <!-- Overlay -->
-    <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/60 to-transparent"></div>
-    <!-- Content -->
-    <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
-      <!--<div class="bg-white rounded-lg px-6 py-4 inline-block">
-        <img src="/img/unra-logo.png" alt="UNRA" class="h-12">
-      </div>-->
-      <h2 class="mt-4 text-2xl font-bold text-white">UNRA</h2>
-      <p class="mt-2 text-white max-w-md">
-        UNRA chose GETLAB to investigate the cause of premature pavement failure on Kyenjojo-Fort Portal road.
-      </p>
-      <a href="/unra.html"
-         class="inline-flex items-center mt-8 px-6 py-2 bg-[#121212] text-white text-[14px] font-semibold shadow hover:bg-[#121212]/110 transition">
-        Read customer story 
-          <span class="text-[#14953D] ml-2 rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </span>
-      </a>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Card 1 -->
+    <div class="relative h-[400px] bg-[url('/img/kyenjojo-fortportal-road.jpg')] bg-cover bg-center overflow-hidden border-t border-l border-r border-[#2c2f33]">
+      <!-- Overlay -->
+      <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/90 to-transparent"></div>
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
+        <div class="bg-white rounded-lg px-2 inline-block">
+          <img src="/img/clients/1.png" alt="UNRA" class="h-16">
+        </div>
+        <!--<h2 class="mt-4 text-2xl font-bold text-white">UNRA</h2>-->
+        <p class=" my-4 text-white max-w-md">
+          UNRA chose GETLAB to investigate the cause of premature pavement failure on Kyenjojo-Fort Portal road
+        </p>
+        <a href="/unra.html"
+          class="inline-flex items-center mb-12 px-6 py-2 bg-[#3B3B3B] text-white text-[14px] font-semibold shadow hover:bg-[#3B3B3B]/80 transition">
+          Read customer story 
+            <span class="text-[#14953D] ml-2 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                  class="size-5">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </span>
+        </a>
+      </div>
     </div>
-  </div>
 
   <!-- Card 2 -->
-  <div class="relative h-[400px] bg-[url('/img/kyenjojo-fortportal-road.jpg')] bg-cover bg-center overflow-hidden border-t border-l border-r border-[#2c2f33]">
+  <div class="relative h-[400px] bg-[url('/img/aurecon.jpg')] bg-cover bg-center overflow-hidden border-t border-l border-r border-[#2c2f33]">
     <!-- Overlay -->
-    <div class="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-black/60 to-transparent"></div>
+    <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/90 to-transparent"></div>
     <!-- Content -->
     <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
-      <!--<div class="bg-white rounded-lg px-6 py-4 inline-block">
-        <img src="/img/aurecon-logo.png" alt="Aurecon" class="h-12">
-      </div>-->
-      <h2 class="mt-4 text-2xl font-bold text-white">AURECON</h2>
-      <p class="mt-2 text-white max-w-md">
-        GETLAB helped AURECON carry out geotechnical and material testing for Kampala Bombo Express Highway.
+      <div class="bg-white rounded-lg px-2 inline-block">
+        <img src="/img/clients/19.png" alt="Aurecon" class="h-16">
+      </div>
+      <!--<h2 class="mt-4 text-2xl font-bold text-white">AURECON</h2>-->
+      <p class="my-4 text-white max-w-md">
+        GETLAB helped AURECON carry out geotechnical and material testing for Kampala Bombo Express Highway
       </p>
-       <a href="/aurecon-story"
-         class="inline-flex items-center mt-8 px-6 py-2 bg-[#121212] text-white text-[14px] font-semibold shadow hover:bg-[#121212]/110 transition">
-        Read customer story 
+       <a href="/kampala-bombo.html"
+         class="inline-flex items-center mb-12 px-6 py-2 bg-[#3B3B3B] text-white text-[14px] font-semibold shadow hover:bg-[#3B3B3B]/80 transition">
+          Read customer story 
           <span class="text-[#14953D] ml-2 rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                class="size-5">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </span>
-      </a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+              class="size-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
-</div>
   </section>
 
-<section class="bg-[#121212] py-5 px-8 md:px-20">
-  <h2 class="text-white text-3xl font-bold mb-6">Some of the other road projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<section class="bg-[#121212] py-5 px-8 md:px-24">
+  <h2 class="text-white text-2xl font-bold mb-6">Some of the other road projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- Card -->
     <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
@@ -259,7 +248,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Professional Engineering Consultants Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Trial pits excavation, DCP test, material sourcing and sampling, water table monitoring , laboratory testing and reporting
+          Consultancy Services For Detailed Engineering Designs, Preparation Of ESIA, RAP & Tender Documents For Road Infrastructure Sub-Projects In Kampala, Wakiso, Mpigi Districts, Nansana, Entebbe & Mukono Municipality : Lot 3 Mokono DLG, Mpigi DLG and Mukono Municipal Council
         </p>
       </div>
       <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
@@ -271,7 +260,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">MBJ Technologies Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Tests Pits, DCP Test, Material sources, Materials interpretive report and pavement design report
+          Framework Contract for The Provision of Consultancy Services for Design of Roads
         </p>
       </div>
       <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
@@ -283,7 +272,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">UB Consulting Engineers Ltd</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Test pit Excavation at bridge and box culvert locations and recover both disturbed and undisturbed samples
+          Consultancy Services For Detailed Engineering Designs, And Construction Supervision Of District And Community Access Roads Package 1, Acholi Sub-Region (Lamwo, Pader And Agago Districts
         </p>
       </div>
       <!--<img src="/img/roadwork.jpg" alt="Transmission line" class="mt-4 rounded-lg">-->
@@ -295,7 +284,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Office of Auditor General</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Materials Testing Services for soil, aggregates, concrete, chemical, and Asphalt samples from various roads
+          Framework contractb - Provision of Laboratory and Materials Testing Servicesof samples obtained from Infrastructure Audits undertaken in Multiple MDA's
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -306,8 +295,17 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">LEA Associates South Asia Pvt. Ltd., India</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Materials and geotechnical investigations on the selected National Roads
-        </p>
+          Geotechnical investigations for Detailed Design and Supervision for Accelerated Growth Corridor Road and Access Infrastructure Package 1: Corridor 5 and 15
+      </div>
+      <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
+    </div>
+
+    <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">Uganda National Roads Authority (UNRA)</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+          Consultancy services for framework contract for materials and geotechnical investigations on the selected National Roads for Three Years
       </div>
       <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
     </div>
@@ -318,7 +316,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">China Railway 18th Bureau Group Co. Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          59 LWDP Probing , 22 Test Pits, 32 Augering up to refusal, 5 boreholes in the swamp locations upto 5m, 4 sampling sand pits, 4 sampling water sources, 60 core drilling for 0-10m, 60 core drilling 10-20m, 18  core drilling 3m into rock, 15 drilling up to 5m, 90 SPT at every 1.5m interval, 95 collecting disturbed samples, 88 undisturbed samples
+          Upgrading Of Tororo-Busia Road (26km) And Mayuge/Busia Town Roads (18km)
         </p>
       </div>
       <!--<img src="/img/roadwork.jpg" alt="Transmission line" class="mt-4 rounded-lg">-->
@@ -330,7 +328,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">National Water and Sewerage Corporation / We- Consult</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling of boreholes to various depths , undisturbed and disturbed soil sampling, water table monitoring, laboratory tests and report writing
+          Detailed Design And Construction Supervison Of The Development Of Water And Infrastructure For The Mbarara & Masaka Areas - Package 3 Masaka
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -341,8 +339,17 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Gauff Consultant Uganda Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling of boreholes to various depths, trial pit excavation along the alignment, undisturbed and disturbed soil sampling, water table monitoring, and laboratory tests
-        </p>
+          Geotechnical Investigation for Kira Matugga Road
+      </div>
+      <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
+    </div>
+
+      <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">Gauff Consultant Uganda Limited</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+          Geotechnical Investigation For Kyaliwajala, Kiira Matunga Road and Five Junction Improvements
       </div>
       <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
     </div>
@@ -353,7 +360,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">SMEC International</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling of 10No. boreholes, test pit excavation, DCP . laboratory testing , material sourcing and identification for borrow pits, sand, water and quarries
+          Material Investigations for Consultancy Services for the Feasibility Study and Detailed Engineering Design for Selected National Roads; Lot 3: Kyenjojo (Kahuge)-Nyarukoma-Kigarale-Rwamwanja-Kihura Road (105 km). Contract Number: UNRA/SERVICES/2014-2015/0054/03
         </p>
       </div>
       <!--<img src="/img/roadwork.jpg" alt="Transmission line" class="mt-4 rounded-lg">-->
@@ -365,7 +372,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Kampala Capital City Authority</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Laboratory testing for material from KCCA roads
+          Framework Contract for the provision of Geotechnical Engineering and Materials Testing Services
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -412,7 +419,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">LEA Associates South Asia Pvt. Ltd, India</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Geotechnical Investigatin for Nabumali- Butaleja- Namutumba Road Project (76km)
+          Geotechnical Investigatin for Nabumali - Butaleja - Namutumba Road Project (76km)
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -423,7 +430,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Office of Auditor General</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Laboratory Testing for material for UNRA Roads
+          Infrastructure projects for UNRA and Ministry of Works
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -434,7 +441,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">AIC Progetti Spa</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling  boreholes to various depths,Trial pit excavation, undisturbed and disturbed soil sampling, carrying out SPT every 1.0m, water table monitoring, Laboratory tests and report writing
+          Consulting services for Feasibility Study and Detailed Engineering Design for Selected National Roads. Lot 3: Hamurwa-Kererekanungu- Kanyantorogo-Butogota-Buhoma / Hamayanja-Ifasha-Ikumba Road (143 Km)
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -445,7 +452,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Centre for Infrastructure Consulting (CIC) Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling of 8No. boreholes to various depths,Trial pit excavation, undisturbed and disturbed soil sampling, carrying out SPT every 1.0m, water table monitoring, Laboratory tests and report writing
+          Reconstruction of washed out and failed Bridges in Northern Uganda under design and build; Lot 3: Design and Build of Awoo Bridge & Emergency reconstruction of failed Bridges on the national network under design and build; Lot 2 - Design and Build of Nariamabune Bridge including a 2km Access Road
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -456,7 +463,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Synohydro Coorporation and EPTISA in association with PEC Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Test pit excavation to 1m and DCP. Laboratory testing (CBR, MDD, PSD, Atterberg’s limits, chemical tests), report writing
+          Design and Build of the upgrading of Kiira – Matuga road and improvement of 5No. junctions (25km)
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -478,9 +485,12 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Stirling Civil Engineering Ltd in association with Professional Engineering Consultants Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Test pit excavation to 1m every 0.2m and DCP to 1m at every 0.2m. Laboratory testing (CBR, MDD, PSD, Atterberg’s limits,
-          chemical tests). Material sourcing and identification for borrow pits, sand, water and quarries, report writing"
-
+          Central Division
+          Lot 4 (Dembe Kirowooza-3.0km, Kigoowa-1.9km, Kimera-1.4km,
+          Kisalita-0.7km, Kisosonkole-1.0km, Kiziri-0.75km, Magambo-0.9km and
+          Robert Mugabe-1.8km Roads)
+          Lot 1 (Archer-0.75km, Luzige-0.3km, Mengo Hill-0.75km, Mpabana-
+          0.75km, Mutebi-0.45km, Nakivubo Channel-0.5km, Namirembe- Luwuum street-1.5km and Semugooma-0.4km Roads in KCCA Central Division)
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -492,6 +502,7 @@
         <h3 class="text-white font-bold text-xl mt-1">Kiru General Services Ltd Kiru General Services Ltd</h3>
         <p class="text-gray-400 text-[14px] mt-2">
           Lot 6- Soils and Materials Testing for selected KCCA roads
+          Lot 6- Soils and Materials Testing for selected KCCA roads
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -500,7 +511,7 @@
      <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
       <div>
         <p class="text-gray-400 text-sm">Client</p>
-        <h3 class="text-white font-bold text-xl mt-1">"Comptran Engineers and Planning Associates</h3>
+        <h3 class="text-white font-bold text-xl mt-1">Comptran Engineers and Planning Associates</h3>
         <p class="text-gray-400 text-[14px] mt-2">
           Geotechnical Investigations for Detailed Design of Lusalira-Kasambya- Nkonge-Ssebabule Road (97 km)
         </p>
@@ -525,6 +536,50 @@
         <h3 class="text-white font-bold text-xl mt-1">Dr. Gilbert Kasangaki and UNRA</h3>
         <p class="text-gray-400 text-[14px] mt-2">
           Soil Investigations for Luweero-Butalangu and Butalangu Ngoma Road
+        </p>
+      </div>
+      <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
+    </div>
+
+    <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">SMEC Under Kampala City Council Authority</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+          Geotechnical And Materials Investigations For The Consultancy Services For Preliminary And Detailed Engineering Design Of Selected Roads Links And Junctions/ Intersections To Improve Mobility In Kampala City In Association With Geovest
+        </p>
+      </div>
+      <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
+    </div>
+
+    <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">PEC Limited Under Uganda National Roads Authority (UNRA)</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+          Geotechnical And Materials Investigation Of Consultancy Services For Collection Of Preliminary Engineering Design Data For Design And Build For Upgrading Of Mbale-Nkokonjeru Road (21km) And Mbale State Lodge Loop (6km)
+        </p>
+      </div>
+      <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
+    </div>
+
+     <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">CCCC 18th BUREAU under Uganda National Roads Authority (UNRA)</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+          Laboratory Testing Services For Upgrading Of Musita Lumino And Busia Majanji Road Project To Bituminous Standards
+        </p>
+      </div>
+      <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
+    </div>
+
+    <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">COIL Limited</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+         Foundation Investigation of Plot 1, Katalima Bend , Naguru, Kampala
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -587,9 +642,7 @@
       </div> 
   </section>-->
 
-
-
- <footer class="relative bg-black px-8 py-12 md:px-20">
+ <footer class="relative bg-black px-8 py-12 md:px-24">
       <div class="flex flex-col lg:flex-row gap-2">
         <!-- Left Side -->
         <div class="w-full lg:w-[34%]">
