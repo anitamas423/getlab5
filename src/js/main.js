@@ -1,18 +1,3 @@
-/*const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('mobileMenu');
-
-btn.addEventListener('click', () => {
-menu.classList.toggle('hidden');
-});
-*/
-
-/*const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuToggle.addEventListener('click', () => {
-mobileMenu.classList.toggle('hidden');
-});
-*/
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 /*const header = document.getElementById('mainHeader');*/
@@ -56,15 +41,3 @@ document.querySelectorAll(".group").forEach(group => {
   });
 });
 
-
-/*
-const links = document.querySelectorAll('.nav-link');
-  const currentPage = window.location.pathname.split("/").pop(); // e.g. "about.html"
-
-  links.forEach(link => {
-    const linkPage = link.getAttribute("href");
-    if (linkPage === currentPage) {
-      link.classList.add('text-blue-500', 'font-bold', 'border-b-2', 'border-blue-500');
-    }
-  });
-*/
