@@ -43,6 +43,7 @@ export default defineConfig({
         buildings: resolve(__dirname, "src/projects/buildings.html"),
         dams: resolve(__dirname, "src/projects/dams-hpp.html"),
         water: resolve(__dirname, "src/projects/water.html"),
+        water: resolve(__dirname, "src/eacop-pipeline.html"),
       },
     },
   }
