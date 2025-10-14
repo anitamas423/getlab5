@@ -16,28 +16,27 @@ mobileMenu.addEventListener('click', (e) => {
   }
 });
 
-// Active page
-const currentPath = window.location.pathname;
-const currentPage = currentPath.split("/").pop();
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname;
+  const currentPage = currentPath.split("/").pop();
 
-// handle direct nav links (About, Home, Contact Us)
-document.querySelectorAll(".nav-link[href]").forEach(link => {
-  const linkPage = new URL(link.href).pathname.split("/").pop();
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-  }
-});
-
-// handle parents with children (Services, Projects)
-document.querySelectorAll(".group").forEach(group => {
-  const parent = group.querySelector(".nav-link"); // Services, Projects button
-  const children = group.querySelectorAll("a");
-
-  children.forEach(child => {
-    const childPage = new URL(child.href).pathname.split("/").pop();
-    if (childPage === currentPage) {
-      parent.classList.add("active");
+  document.querySelectorAll(".nav-link[href]").forEach(link => {
+    const linkPage = new URL(link.href).pathname.split("/").pop();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
     }
+  });
+
+  document.querySelectorAll(".group").forEach(group => {
+    const parent = group.querySelector(".nav-link");
+    const children = group.querySelectorAll("a");
+
+    children.forEach(child => {
+      const childPage = new URL(child.href).pathname.split("/").pop();
+      if (childPage === currentPage) {
+        parent.classList.add("active");
+      }
+    });
   });
 });
 
