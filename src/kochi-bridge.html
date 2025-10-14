@@ -3,24 +3,24 @@
   <head>
   <meta charset="UTF-8" />
     <link rel="icon" type="#" href="#" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet"/>
+    <link href="./styles.css" rel="stylesheet"/>
   </head>
   <body class="font-space dark:bg-black text-gray-400 min-h-screen relative sm:text-base">
     <div id="root"></div>
     
-    <script type="module" src="/js/main.js"></script>
-    <script type="module" src="/js/button.jsx"></script>
+    <script type="module" src="./js/main.js"></script>
+    <!--<script type="module" src="/js/.js"></script>-->
+    <script type="module" src="./js/modal.js"></script>
     <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-10 py-3 border-b border-dotted border-gray-400/40">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <!-- Logo -->
         <!-- Left Navigation Links -->
         <div class="flex items-center space-x-8">
-          <a href="index.html"><img src="img/logo-on-dark.webp" alt="logo" class="h-7 w-auto" /></a>
+          <a href="/"><img src="/img/logo-on-dark.webp" alt="logo" class="h-7 w-auto" /></a>
           <nav class="flex space-x-4 hidden md:block">
-            <a href="/index.html" class="nav-link hover:text-gray-300">Home</a>
+            <a href="/" class="nav-link hover:text-gray-300">Home</a>
             <a href="/about.html" class="nav-link hover:text-gray-300">About Us</a>              
             <a href="/services.html" class="nav-link hover:text-gray-300">Services</a>             
             <a href="/projects.html" class="nav-link hover:text-gray-300">Projects</a>            
@@ -63,20 +63,19 @@
   </div><!--End of mobile dropdown-->
 
 
-  <section class="relative px-2 md:px-5 bg-[#0c0c0c] pt-4 md:pt-15 md:pb-20">    
-    <a href="/bridges.html" class="inline-flex items-center gap-2 px-2 text-[#14953D]">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-            Back to Bridges 
+  <section class="relative px-2 md:px-20 bg-[#0c0c0c] pt-4 md:pt-15 md:pb-20">    
+    <a href="/projects/bridges.html" class="inline-flex items-center gap-2 px-2 text-[#14953D]">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+        Back to Bridges 
     </a>
-
     <div class="flex flex-col md:flex-row">
 
     <!-- Content -->
     <div class="flex-1 px-2 md:p1-2 md:pr-10 md:mt-5 md:mb-20">
         <h1 class="text-white text-3xl md:text-[45px] font-extrabold md:mb-10">
-            Drilling and build of 3 strategic bridges in West Nile Sub region: Kochi Bridge on Keri-Midigo-Kerwa Road, Osu on Arua- Biliafe- Otrevu Raod and Odrua on Arua- Vuraa Custom-Paidha Goli Road. 
+            Drilling and build of 3 strategic bridges in West Nile Sub region: Kochi Bridge on Keri-Midigo-Kerwa Road, Osu on Arua- Biliafe- Otrevu Raod and Odrua on Arua- Vuraa Custom-Paidha Goli Road 
         </h1>
         <p class="text-gray-400 md:mb-10 text-base">
           Kochi Bridge spans River Kochi, located in Yumbe District in West Nile sub‑region of Uganda. 
@@ -148,12 +147,12 @@
   </div><!-- End of content-->
 
   <!-- Sidebar -->
-   <aside class="w-full md:w-110 md:self-start md:sticky md:mt-5  md:top-20 px-25 md:px-4">
-   <!--<div class="bg-[#0B0E13] rounded-2xl overflow-hidden">-->
-        <div class="bg-gray-900 rounded-4xl overflow-hidden">
+  <aside class="w-full md:w-110 md:self-start md:sticky py-8 md:my-0 md:top-20 px-8 md:px-4">
+  <!--<div class="bg-[#0B0E13] rounded-2xl overflow-hidden">-->
+    <div class="bg-gray-900 rounded-4xl overflow-hidden">
         <!-- Image -->
         <div class="px-10 py-10">
-            <img src="/img/kochi-bridge/cover-pic(3).jpeg" alt="Pipeline Work" class="w-full h-55 object-cover rounded-2xl">
+            <img src="/img/kochi-bridge/cover-pic(2).jpeg" alt="Pipeline Work" class="w-full h-55 object-cover rounded-2xl">
             <h3 class="text-white text-2xl mt-4 font-semibold leading-snug">
                 Centre for Infrastructure Consulting Limited. (CIC)
             </h3>
@@ -228,11 +227,6 @@
       </div>
       <hr class="mt-15 mb-8 border-gray-900">
       <div class="text-left">&copy; 2025 <strong>GETLAB</strong></div>
-
-      <!-- Back to Top -->
-      <a href="#top" class="fixed bottom-5 right-5 bg-white text-green-600 p-2 rounded-full shadow-lg">
-        ↑
-      </a>
     </footer>
 
   </body>
