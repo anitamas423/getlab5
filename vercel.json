@@ -2,10 +2,6 @@
   "cleanUrls": true,
    "rewrites": [
     {
-      "source": "/about",
-      "destination": "/src/about.html"
-    },
-    {
       "source": "/:path((?!src/).*)",
       "destination": "/src/:path"
     }
