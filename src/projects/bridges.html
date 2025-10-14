@@ -2,19 +2,22 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="#" href="#" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="../styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
   </head>
   <body class="font-space dark:bg-black text-gray-400 min-h-screen relative sm:text-base">
     <div id="root"></div>
     
     <script type="module" src="../js/main.js"></script>
-    <script type="module" src="../js/modal.js"></script>
-    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-8 py-3 border-b border-dotted border-gray-400/40">
+    <script type="module" src="../js/contact-modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+ 
+    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-4 md:px-15 py-3 border-b border-dotted border-gray-400/40">
       <div class="mx-auto flex items-center justify-between">
         <!-- Logo -->
         <!-- Left Navigation Links -->
@@ -30,14 +33,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/services/soil-testing" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
-                <a href="/services/asphalt-testing" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
-                <a href="/services/concrete-aggregate-testing" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
-                <a href="/services/chemical-testing" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
-                <a href="/services/geotechnical-investigations" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
-                <a href="/services/geophysical-investigations" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
-              </div>
+              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil Testing</a>
+                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt Testing</a>
+                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate Testing</a>
+                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical Testing</a>
+                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical Investigations</a>
+                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical Investigations</a>
+              </div> 
             </div>
             <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
 
@@ -49,120 +52,115 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission lines & Substations</a>
-                <a href="/projects/road-projects.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission Lines & Substations</a>
+                <a href="/projects/roads.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
                 <a href="/projects/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
                 <a href="/projects/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
-                <a href="/projects/dams.html" class="block px-4 py-2 hover:text-gray-300">Dams</a>
-                <a href="/projects/water-projects.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+                <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams & HPP</a>
+                <a href="/projects/water.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
                 
               </div>
             </div>
 
-            <div><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
           </nav>
         </div>
 
         <!-- Right Navigation Links -->
-        <div class="flex space-x-3">
-          <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
-            Get a Quotation
-            <span class="text-white rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </span>
-            </button> 
-          <div id="modalOverlay"
-     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+        <div class="flex space-x-1">
+          <nav class="flex items-center space-x-8">
+            <div class="hidden md:flex"><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
+            <a href="#" class="openModal flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+              Get a Quotation
+              <span class="text-white rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </span>
+            </a> 
+          </nav>
+          <div id="modalOverlay" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+                        max-h-[90vh] overflow-y-auto">
+      
+              <!-- Close Button -->
+              <button id="closeModal"
+                      class="absolute top-3 right-3 hover:text-gray-200 text-2xl">&times;</button>
 
-  <!-- Modal Content -->
-  <div id="modalContent"
-       class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
-              max-h-[90vh] overflow-y-auto">
-    
-    <!-- Close Button -->
-    <button id="closeModal"
-            class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+              <h2 class="text-2xl text-gray-200 font-semibold text-center">Provide us a few details</h2>
 
-    <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+              <!-- Email -->
+              <input type="email" placeholder="EMAIL ADDRESS*" required
+                    class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
 
-    <!-- Email -->
-    <input type="email" placeholder="EMAIL ADDRESS*" required
-           class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              <!-- Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="FIRST NAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <input type="text" placeholder="SURNAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              </div>
 
-    <!-- Name -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <input type="text" placeholder="FIRST NAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-      <input type="text" placeholder="SURNAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-    </div>
+              <!-- Contact and Market -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input id="phone" type="tel" 
+        placeholder="ENTER PHONE NUMBER *" required
+        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <select class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                  <option value="" disabled selected hidden>SELECT SERVICE</option>
+                  <option>Laboratory Testing</option>
+                  <option>Field Investigations</option>
+                  <option>Equipment Hire</option>
+                  <option>Training & Capacity Building</option>
+                </select>
+              </div>
 
-    <!-- Contact and Market -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="" class="text-gray-400">CONTACT NUMBER *</option>
-        <option>Uganda</option>
-        <option>Kenya</option>
-      </select>
-      <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="">SELECT SERVICE</option>
-        <option>Laboratory Testing</option>
-        <option>Field Investigations</option>
-        <option>Equipment Hire</option>
-        <option>Training & Capacity Building</option>
-      </select>
-    </div>
+              <!-- Challenge -->
+              <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+                        class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
 
-    <!-- Challenge -->
-    <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
-              class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+              <!-- Consent -->
+              <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+                <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+                <span>I understand the privacy policy </span>
+              </label>
+              <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+                </p>
 
-    <!-- Consent -->
-    <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
-      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
-      <span>I understand the privacy policy </span>
-    </label>
-    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
-      </p>
-
-    <!-- Submit / Take me home -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <button type="submit"
-              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-        SEND
-      </button>
-      <button type="button"
-              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-        TAKE ME HOME
-      </button>
-    </div>
-  </div>
-</div>
+              <!-- Submit / Take me home -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button type="submit" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  SEND
+                </button>
+                <button type="button" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  TAKE ME HOME
+                </button>
+              </div>
+            </div><!-- End of Modal Content -->
+          </div><!-- End of Modal Overlay -->
 
           <button id="menuToggle" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
-        </div>
+        </div><!-- End of Right Navigation Links -->
       </div>
     </header>
-      <!-- Overlay dropdown -->
+
+  <!-- Overlay dropdown -->
   <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-51 hidden">
     <div class="bg-black text-white p-6 space-y-3 h-full w-[70%] text-lg left-0 border-r border-dotted border-gray-400/40">
       <a href="#" class="block hover:text-gray-300">Home</a>
       <a href="#" class="block hover:text-gray-300">About Us</a>
       <a href="#" class="block hover:text-gray-300">Services</a>
       <!--<a href="#" class="block hover:text-gray-300">Projects</a>-->
-       <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
-    Projects
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </a>
+      <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
+        Projects
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
 
   <!-- Mobile -->
   <div class="mt-2 space-y-1 block md:hidden">
@@ -176,28 +174,27 @@
       <button class="border-gray-900 border-1 py-2 px-2 rounded-lg">
         <a href="#" class="block hover:text-gray-300">Get a Quote</a></button>
     </div>
-  </div><!--End of mobile dropdown-->
+  </div><!--End of mobile dropdown-->  
 
-
-  <section class="bg-[#121212] text-white px-8 md:px-20 pt-12">
-    <h1 class="text-4xl font-bold mb-8">Featured projects</h1>
+  <section class="bg-[#121212] text-white px-8 md:px-24 pt-12">
+    <h1 class="text-2xl font-bold mb-4">Featured projects</h1>
    
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <!-- Card 1 -->
-  <div class="relative h-[400px] bg-[url('/img/apaa-bridge/cover-pic(2).jpg')] border-t border-l border-r border-[#2c2f33] bg-cover bg-center overflow-hidden">
+  <div class="relative h-[400px] bg-[url('/img/apaa-bridge.jpeg')] border-t border-l border-r border-[#2c2f33] bg-cover bg-center overflow-hidden">
     <!-- Overlay -->
-    <div class="absolute top-0 left-0 h-full w-3/5 bg-gradient-to-r from-black/40 via-black/5 to-transparent"></div>
+    <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/90 to-transparent"></div>
     <!-- Content -->
     <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
-      <!--<div class="bg-white rounded-lg px-6 py-4 inline-block">
-        <img src="/img/unra-logo.png" alt="UNRA" class="h-12">
-      </div>-->
-      <h2 class="mt-4 text-2xl font-bold text-white">CIC</h2>
-      <p class="mt-2 text-white max-w-md">
+      <div class="bg-white rounded-lg px-2 inline-block">
+        <img src="/img/clients/10.png" alt="CIC" class="h-16">
+      </div>
+      <!--<h2 class="mt-4 text-2xl font-bold text-white">CIC</h2>-->
+      <p class="my-4 text-white max-w-md">
         CIC partnered with GETLAB to undertake geotechnical investigations for Apaa Bridge.
       </p>
       <a href="/apaa-bridge"
-        class="inline-flex items-center mt-8 px-6 py-2 bg-[#1D1C1D]/95 text-white text-[14px] font-semibold shadow hover:bg-[#1D1C1D]/110 transition">
+        class="inline-flex items-center mb-12 px-6 py-2 bg-[#3B3B3B] text-white text-[14px] font-semibold shadow hover:bg-[#3B3B3B]/90 transition">
         Read customer story 
           <span class="text-[#14953D] ml-2 rounded">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -212,20 +209,20 @@
   </div>
 
   <!-- Card 2 -->
-  <div class="relative h-[400px] bg-[url('/img/kochi-bridge/cover-pic(3).jpeg')] border-l border-t border-r border-[#2c2f33] bg-cover bg-center overflow-hidden">
+  <div class="relative h-[400px] bg-[url('/img/bridges-cover.jpeg')] border-l border-t border-r border-[#2c2f33] bg-cover bg-center overflow-hidden">
     <!-- Overlay -->
-    <div class="absolute top-0 left-0 h-full w-1/4 bg-gradient-to-r from-black/40  to-transparent"></div>
+    <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/90 to-transparent"></div>
     <!-- Content -->
     <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
-      <!--<div class="bg-white rounded-lg px-6 py-4 inline-block">
-        <img src="/img/aurecon-logo.png" alt="Aurecon" class="h-12">
-      </div>-->
-      <h2 class="mt-4 text-2xl font-bold text-white">CIC</h2>
-      <p class="mt-2 text-white max-w-md">
+      <div class="bg-white rounded-lg px-2 inline-block">
+        <img src="/img/clients/10.png" alt="CIC" class="h-16">
+      </div>
+      <!--<h2 class="mt-4 text-2xl font-bold text-white">CIC</h2>-->
+      <p class="my-4 text-white max-w-md">
         GETLAB was contracted to aid in proper foundation design and stability of Kochi Bridge.
       </p>
        <a href="/kochi-bridge"
-         class="inline-flex items-center mt-8 px-6 py-2 bg-[#1D1C1D]/95 text-white text-[14px] font-semibold shadow hover:bg-[#121212]/110 transition">
+         class="inline-flex items-center mb-12 px-6 py-2 bg-[#3B3B3B] text-white text-[14px] font-semibold shadow hover:bg-[#3B3B3B]/90 transition">
         Read customer story 
           <span class="text-[#14953D] ml-2 rounded">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -241,10 +238,10 @@
 </div>
   </section>
 
-<section class="bg-[#121212] py-5 px-8 md:px-20">
-  <h2 class="text-white text-3xl font-bold mb-6">Other bridge projects</h2>
+<section class="bg-[#121212] py-5 px-8 md:px-24">
+  <h2 class="text-white text-2xl font-bold mb-6">Other bridge projects</h2>
  
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
     <!-- Card -->
     <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
@@ -264,7 +261,8 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">UB Consulting Engineers Ltd</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Test pit Excavation at bridge and box culvert locations and recover both disturbed and undisturbed samples
+          Consultancy Services For Detailed Engineering Designs, And Construction Supervision Of District And 
+          Community Access Roads Package 1, Acholi Sub-Region (Lamwo, Pader And Agago Districts)
         </p>
       </div>
       <!--<img src="/img/roadwork.jpg" alt="Transmission line" class="mt-4 rounded-lg">-->
@@ -276,7 +274,8 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Centre for Infrastructure Consulting Ltd</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Rotary Drilling boreholes upto 10m and 6 Rotary Drilling boreholes
+          Consultancy services for Detailed Engineeering Design of Selected Bridges - Lot 1: Bubwaya-Mungasa 
+          Bridge, Nakadidir-Lukolwe Swamp crossingand Kittoke - Kanangalo Bridge
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -287,7 +286,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">China Communication Construction Company</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling of boreholes to various depths ,SPT test , undisturbed and disturbed soil sampling, water table monitoring, Laboratory tests
+          Geotechnical Investigation for the 40m span bridge and multiple cell box culverts on Lugogo swamp crossing along Kyamukonda-Kasozi-Ngoma Road
         </p>
       </div>
       <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
@@ -299,7 +298,7 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">UB Consulting Engineers Ltd</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-           Drilling  of  15No. boreholes to various depths, undisturbed and disturbed soil sampling, water table monitoring, Laboratory tests
+          Geotechnical Investigation at Bridge Foundation Investigations in Refugee Hosting Districts
         </p>
       </div>
       <!--<img src="/img/roadwork.jpg" alt="Transmission line" class="mt-4 rounded-lg">-->
@@ -311,8 +310,18 @@
         <p class="text-gray-400 text-sm">Client</p>
         <h3 class="text-white font-bold text-xl mt-1">Centre for Infrastructure Consulting (CIC) Limited</h3>
         <p class="text-gray-400 text-[14px] mt-2">
-          Drilling of 12No. boreholes to various depths,Trial pit excavation, undisturbed and disturbed soil sampling, carrying out SPT
-            every 1.0m, water table monitoring, Laboratory tests
+          Design and build of strategic Bridges on the National Network; Lot 3: Design and Build of Alla(Anzuu) Bridge, Gazi (Rhino Camp) Bridge and Aca (Rhino Camp)Bridge in Arua District in Uganda
+        </p>
+      </div>
+      <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
+    </div>
+    <!-- Card -->
+    <div class="bg-[#1c1c1c] rounded-2xl p-6 flex flex-col justify-between border border-[#2c2f33]">
+      <div>
+        <p class="text-gray-400 text-sm">Client</p>
+        <h3 class="text-white font-bold text-xl mt-1">Centre for Infrastructure Consulting (CIC) Limited</h3>
+        <p class="text-gray-400 text-[14px] mt-2">
+          Design and build of strategic Bridges on the National Network; Lot 1: Design and Build of Sironko Bridge on Mbale-Sironko Road, Chololo Bridge on Chosa-Amudat Road and Kibimba Bridge on Kampala- Malaba Boarder Road in Ugand
         </p>
       </div>
       <!--<img src="/img/construction.jpg" alt="Soil investigation" class="mt-4 rounded-lg">-->
@@ -324,7 +333,6 @@
         <h3 class="text-white font-bold text-xl mt-1">China Railway No.3 Engineering Group Ltd</h3>
         <p class="text-gray-400 text-[14px] mt-2">
           Geotechnical Investigations for the Proposed Bridge Site Along Soroti Moroto Road-Lot 2
-        </p>
       </div>
       <!--<img src="/img/pipeline.jpg" alt="Pipeline" class="mt-4 rounded-lg">-->
     </div>
@@ -400,7 +408,7 @@
 
 
 
- <footer class="relative bg-black px-8 py-12 md:px-20">
+ <footer class="relative bg-black px-8 py-12 md:px-24">
       <div class="flex flex-col lg:flex-row gap-2">
         <!-- Left Side -->
         <div class="w-full lg:w-[34%]">
