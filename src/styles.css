@@ -28,11 +28,11 @@
   width: max-content;
 }
 
-.active {
+/*.active {
   @apply text-[#14953D];
-}
+}*/
 
-/*.nav-link.active {
+.nav-link.active {
   color: #14953D; 
   
-}*/
+}
