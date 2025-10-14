@@ -1,3 +1,18 @@
+/*const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+menu.classList.toggle('hidden');
+});
+*/
+
+/*const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuToggle.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+*/
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 /*const header = document.getElementById('mainHeader');*/
@@ -16,30 +31,41 @@ mobileMenu.addEventListener('click', (e) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Normalize path (remove trailing slash, lowercase)
-  function normalize(path) {
-    return path.replace(/\/+$/, '').toLowerCase();
-  }
-  const currentPath = normalize(window.location.pathname === "/" ? "/index.html" : window.location.pathname);
+// Active page
+const currentPath = window.location.pathname;
+const currentPage = currentPath.split("/").pop();
 
-  document.querySelectorAll(".nav-link[href]").forEach(link => {
-    const linkPath = normalize(new URL(link.href, window.location.origin).pathname || "/index.html");
-    if (linkPath === currentPath) {
-      link.classList.add("active");
+// handle direct nav links (About, Home, Contact Us)
+document.querySelectorAll(".nav-link[href]").forEach(link => {
+  const linkPage = new URL(link.href).pathname.split("/").pop();
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+
+// handle parents with children (Services, Projects)
+document.querySelectorAll(".group").forEach(group => {
+  const parent = group.querySelector(".nav-link"); // Services, Projects button
+  const children = group.querySelectorAll("a");
+
+  children.forEach(child => {
+    const childPage = new URL(child.href).pathname.split("/").pop();
+    if (childPage === currentPage) {
+      parent.classList.add("active");
     }
   });
-
-  // For dropdown parents (Services, Projects)
-  document.querySelectorAll(".group").forEach(group => {
-    const parent = group.querySelector(".nav-link");
-    const children = group.querySelectorAll("a[href]");
-    children.forEach(child => {
-      const childPath = normalize(new URL(child.href, window.location.origin).pathname);
-      if (childPath === currentPath) {
-        parent.classList.add("active");
-      }
-    });
-  });
 });
+
+
+/*
+const links = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.pathname.split("/").pop(); // e.g. "about.html"
+
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+      link.classList.add('text-blue-500', 'font-bold', 'border-b-2', 'border-blue-500');
+    }
+  });
+*/
 
