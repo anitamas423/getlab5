@@ -22,13 +22,14 @@ const currentPath = window.location.pathname;
 const currentPage = currentPath.split("/").pop();
 
 // handle direct nav links (About, Home, Contact Us)
-document.querySelectorAll(".nav-link[href]").forEach(link => {
-  const linkPage = new URL(link.href).pathname.split("/").pop();
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-  }
-});
-
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".nav-link[href]").forEach(link => {
+    const linkPage = new URL(link.href).pathname.split("/").pop();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+ });
 // handle parents with children (Services, Projects)
 document.querySelectorAll(".group").forEach(group => {
   const parent = group.querySelector(".nav-link"); // Services, Projects button
