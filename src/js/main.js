@@ -23,10 +23,9 @@ const currentPage = currentPath.split("/").pop();
 
 // handle direct nav links (About, Home, Contact Us)
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".nav-link[href]").forEach(link => {
-    const linkPage = new URL(link.href).pathname.split("/").pop();
-    if (linkPage === currentPage) {
-      link.classList.add("active");
+   document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('href') === window.location.pathname) {
+      link.classList.add('active');
     }
   });
  });
