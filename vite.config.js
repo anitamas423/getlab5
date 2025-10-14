@@ -46,6 +46,8 @@ export default defineConfig({
         eacop: resolve(__dirname, "src/eacop-pipeline.html"),
         kyenjojo: resolve(__dirname, "src/kyenjojo-fort-portal.html"),
         kampala: resolve(__dirname, "src/kampala-bombo.html"),
+        apaa: resolve(__dirname, "src/apaa-bridge.html"),
+        kochi: resolve(__dirname, "src/kochi-bridge.html"),
       },
     },
   }
