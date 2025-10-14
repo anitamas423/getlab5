@@ -44,6 +44,7 @@ export default defineConfig({
         dams: resolve(__dirname, "src/projects/dams-hpp.html"),
         water: resolve(__dirname, "src/projects/water.html"),
         water: resolve(__dirname, "src/eacop-pipeline.html"),
+        kampala: resolve(__dirname, "src/kyenjojo-fort-portal.html"),
         kampala: resolve(__dirname, "src/kampala-bombo.html"),
       },
     },
