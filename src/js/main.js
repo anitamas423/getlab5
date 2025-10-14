@@ -17,23 +17,26 @@ mobileMenu.addEventListener('click', (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname;
-  const currentPage = currentPath.split("/").pop();
+  // Normalize path (remove trailing slash, lowercase)
+  function normalize(path) {
+    return path.replace(/\/+$/, '').toLowerCase();
+  }
+  const currentPath = normalize(window.location.pathname === "/" ? "/index.html" : window.location.pathname);
 
   document.querySelectorAll(".nav-link[href]").forEach(link => {
-    const linkPage = new URL(link.href).pathname.split("/").pop();
-    if (linkPage === currentPage) {
+    const linkPath = normalize(new URL(link.href, window.location.origin).pathname || "/index.html");
+    if (linkPath === currentPath) {
       link.classList.add("active");
     }
   });
 
+  // For dropdown parents (Services, Projects)
   document.querySelectorAll(".group").forEach(group => {
     const parent = group.querySelector(".nav-link");
-    const children = group.querySelectorAll("a");
-
+    const children = group.querySelectorAll("a[href]");
     children.forEach(child => {
-      const childPage = new URL(child.href).pathname.split("/").pop();
-      if (childPage === currentPage) {
+      const childPath = normalize(new URL(child.href, window.location.origin).pathname);
+      if (childPath === currentPath) {
         parent.classList.add("active");
       }
     });
