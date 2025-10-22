@@ -1,43 +1,48 @@
-const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-/*const header = document.getElementById('mainHeader');*/
-
-menuToggle.addEventListener('click', () => {
-  //const isOpen = !mobileMenu.classList.contains('hidden');
-  mobileMenu.classList.toggle('hidden');
-/*  header.classList.toggle('hidden');*/
-});
-
-// Close overlay when clicking on the menu background
-mobileMenu.addEventListener('click', (e) => {
-  if (e.target === mobileMenu) {
-    mobileMenu.classList.add('hidden');
-    /*header.classList.remove('hidden');*/
-  }
-});
+// mobile-submenu.js
+// Initialize after DOM is ready to avoid errors when elements aren't yet present.
 
 document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
-  if (!mobileMenu) return;
+
+  if (!menuToggle || !mobileMenu) {
+    // Elements not present — nothing to do.
+    return;
+  }
+
+  // Toggle the overlay
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close overlay when clicking on the overlay background
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
 
   const triggers = mobileMenu.querySelectorAll('.relative.group > a, .relative.group > button');
-
   const isMobile = () => window.innerWidth < 768;
 
-  // ensure submenus are in the correct state for current viewport
+  // Ensure submenus are in the correct state for the current viewport
   function resetSubmenus() {
-    mobileMenu.querySelectorAll('.relative.group > .absolute').forEach(sub => {
+    mobileMenu.querySelectorAll('.relative.group > .absolute, .relative.group > div').forEach(sub => {
       if (isMobile()) {
-        sub.classList.remove('absolute');      // remove absolute positioning on mobile
-        sub.classList.add('hidden', 'pl-4');   // start hidden and indented
+        // mobile: remove absolute positioning, hide by default, add indentation helper
+        sub.classList.remove('absolute');
+        sub.classList.add('hidden', 'pl-4');
+        sub.classList.remove('block');
       } else {
-        sub.classList.add('absolute');         // desktop behaviour
-        sub.classList.remove('pl-4', 'block'); // remove mobile helpers
+        // desktop: keep submenus absolute and hidden (desktop hover behavior)
+        sub.classList.add('absolute');
+        sub.classList.remove('pl-4', 'block');
         sub.classList.add('hidden');
       }
     });
   }
 
+  // initial state and on resize
   resetSubmenus();
   window.addEventListener('resize', resetSubmenus);
 
@@ -48,12 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     trigger.addEventListener('click', (e) => {
       if (!isMobile()) return; // keep desktop hover behavior
-      e.preventDefault();      // prevent # jump
+      e.preventDefault();      // prevent jump
 
       const isOpen = !submenu.classList.contains('hidden');
 
       // close other open submenus
-      mobileMenu.querySelectorAll('.relative.group > div').forEach(s => {
+      mobileMenu.querySelectorAll('.relative.group > div, .relative.group > .absolute').forEach(s => {
         if (s !== submenu) {
           s.classList.add('hidden');
           s.classList.remove('block');
@@ -70,11 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // close submenus when clicking outside mobileMenu
+  // close submenus when clicking outside mobileMenu on mobile
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!mobileMenu.contains(e.target)) {
-      mobileMenu.querySelectorAll('.relative.group > div').forEach(s => {
+      mobileMenu.querySelectorAll('.relative.group > div, .relative.group > .absolute').forEach(s => {
         s.classList.add('hidden');
         s.classList.remove('block');
       });
