@@ -79,35 +79,38 @@
               </span>
             </a> 
           </nav>
-          <div id="modalOverlay" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+
+          <div id="modalOverlay" class="hidden fixed top-0 left-0 w-screen h-screen inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-51">
+
+            <!-- Modal Content -->
             <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
                         max-h-[90vh] overflow-y-auto">
       
               <!-- Close Button -->
               <button id="closeModal"
-                      class="absolute top-3 right-3 hover:text-gray-200 text-2xl">&times;</button>
+                      class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
 
-              <h2 class="text-2xl text-gray-200 font-semibold text-center">Provide us a few details</h2>
+              <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
 
               <!-- Email -->
               <input type="email" placeholder="EMAIL ADDRESS*" required
-                    class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                    class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
 
               <!-- Name -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input type="text" placeholder="FIRST NAME *" required
-                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                      class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
                 <input type="text" placeholder="SURNAME *" required
-                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                      class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
               </div>
 
               <!-- Contact and Market -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input id="phone" type="tel" 
-        placeholder="ENTER PHONE NUMBER *" required
-        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-                <select class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-                  <option value="" disabled selected hidden>SELECT SERVICE</option>
+       placeholder="ENTER PHONE NUMBER *" required
+       class="w-full p-3 rounded bg-[#3B3B3B] text-white focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <select class="w-full p-3 rounded bg-[#3B3B3B] text-white focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                  <option value="" class="text-white">SELECT SERVICE</option>
                   <option>Laboratory Testing</option>
                   <option>Field Investigations</option>
                   <option>Equipment Hire</option>
