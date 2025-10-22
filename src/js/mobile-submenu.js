@@ -1,48 +1,25 @@
-// mobile-submenu.js
-// Initialize after DOM is ready to avoid errors when elements aren't yet present.
-
 document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
-
-  if (!menuToggle || !mobileMenu) {
-    // Elements not present — nothing to do.
-    return;
-  }
-
-  // Toggle the overlay
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  // Close overlay when clicking on the overlay background
-  mobileMenu.addEventListener('click', (e) => {
-    if (e.target === mobileMenu) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
+  if (!mobileMenu) return;
 
   const triggers = mobileMenu.querySelectorAll('.relative.group > a, .relative.group > button');
+
   const isMobile = () => window.innerWidth < 768;
 
-  // Ensure submenus are in the correct state for the current viewport
+  // ensure submenus are in the correct state for current viewport
   function resetSubmenus() {
-    mobileMenu.querySelectorAll('.relative.group > .absolute, .relative.group > div').forEach(sub => {
+    mobileMenu.querySelectorAll('.relative.group > .absolute').forEach(sub => {
       if (isMobile()) {
-        // mobile: remove absolute positioning, hide by default, add indentation helper
-        sub.classList.remove('absolute');
-        sub.classList.add('hidden', 'pl-4');
-        sub.classList.remove('block');
+        sub.classList.remove('absolute');      // remove absolute positioning on mobile
+        sub.classList.add('hidden', 'pl-4');   // start hidden and indented
       } else {
-        // desktop: keep submenus absolute and hidden (desktop hover behavior)
-        sub.classList.add('absolute');
-        sub.classList.remove('pl-4', 'block');
+        sub.classList.add('absolute');         // desktop behaviour
+        sub.classList.remove('pl-4', 'block'); // remove mobile helpers
         sub.classList.add('hidden');
       }
     });
   }
 
-  // initial state and on resize
   resetSubmenus();
   window.addEventListener('resize', resetSubmenus);
 
@@ -53,12 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     trigger.addEventListener('click', (e) => {
       if (!isMobile()) return; // keep desktop hover behavior
-      e.preventDefault();      // prevent jump
+      e.preventDefault();      // prevent # jump
 
       const isOpen = !submenu.classList.contains('hidden');
 
       // close other open submenus
-      mobileMenu.querySelectorAll('.relative.group > div, .relative.group > .absolute').forEach(s => {
+      mobileMenu.querySelectorAll('.relative.group > div').forEach(s => {
         if (s !== submenu) {
           s.classList.add('hidden');
           s.classList.remove('block');
@@ -75,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // close submenus when clicking outside mobileMenu on mobile
+  // close submenus when clicking outside mobileMenu
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!mobileMenu.contains(e.target)) {
-      mobileMenu.querySelectorAll('.relative.group > div, .relative.group > .absolute').forEach(s => {
+      mobileMenu.querySelectorAll('.relative.group > div').forEach(s => {
         s.classList.add('hidden');
         s.classList.remove('block');
       });
