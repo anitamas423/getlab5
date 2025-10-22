@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
   <head>
   <meta charset="UTF-8" />
-    <link rel="icon" type="#" href="#" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geotechnical Engineering and Technology Laboratory (GETLAB) Ltd</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     
     <script type="module" src="../js/main.js"></script>
     <script type="module" src="../js/contact-modal.js"></script>
-    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-8 py-3 border-b border-dotted border-gray-400/40">
+    <header class="sticky top-0 left-0 w-full z-50 bg-black text-white text-[14px] px-4 md:px-15 py-3 border-b border-dotted border-gray-400/40">
       <div class="mx-auto flex items-center justify-between">
         <!-- Logo -->
         <!-- Left Navigation Links -->
@@ -29,14 +29,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
-                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
-                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
-                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
-                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
-                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
-              </div>
+              <div class="absolute left-0 top-full mt-2 hidden w-70 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil Testing</a>
+                <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt Testing</a>
+                <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate Testing</a>
+                <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical Testing</a>
+                <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical Investigations</a>
+                <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical Investigations</a>
+              </div> 
             </div>
             <!--<div><a href="/services.html" class="nav-link hover:text-gray-300">Services</a></div>-->
 
@@ -48,123 +48,153 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
               </button>
-              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#3B3B3B] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
-                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission lines & Substations</a>
+              <div class="absolute left-0 top-full mt-2 hidden w-60 bg-[#0c0c0c] text-white rounded-lg shadow-lg md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+                <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission Lines & Substations</a>
                 <a href="/projects/roads.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
                 <a href="/projects/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
                 <a href="/projects/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
-                <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams</a>
+                <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams & HPP</a>
                 <a href="/projects/water.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
                 
               </div>
             </div>
 
-            <div><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
           </nav>
         </div>
 
         <!-- Right Navigation Links -->
         <div class="flex space-x-3">
-          <button id="openModal" class="flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
-            Get a Quotation
-            <span class="text-white rounded">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-            </span>
-            </button> 
-          <div id="modalOverlay"
-     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <nav class="flex items-center space-x-8">
+            <div class="hidden md:flex"><a href="/contact-us.html" class="nav-link hover:text-gray-300">Contact Us</a></div>
+            <a href="#" class="openModal flex items-center border border-gray-900 px-3 py-1 gap-1 hover:bg-[#303030]">     
+              Get a Quotation
+              <span class="text-white rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </span>
+            </a> 
+          </nav>
+          <div id="modalOverlay" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+            <div id="modalContent" class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
+                        max-h-[90vh] overflow-y-auto">
+      
+              <!-- Close Button -->
+              <button id="closeModal"
+                      class="absolute top-3 right-3 hover:text-gray-200 text-2xl">&times;</button>
 
-  <!-- Modal Content -->
-  <div id="modalContent"
-       class="bg-[#0c0c0c] shadow-lg rounded-lg p-8 w-full max-w-2xl space-y-4 relative border border-[#2c2f33]
-              max-h-[90vh] overflow-y-auto">
-    
-    <!-- Close Button -->
-    <button id="closeModal"
-            class="absolute top-3 right-3 text-gray-500 hover:text-gray-200 text-2xl">&times;</button>
+              <h2 class="text-2xl text-gray-200 font-semibold text-center">Provide us a few details</h2>
 
-    <h2 class="text-2xl font-semibold text-center">Provide us a few details</h2>
+              <!-- Email -->
+              <input type="email" placeholder="EMAIL ADDRESS*" required
+                    class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
 
-    <!-- Email -->
-    <input type="email" placeholder="EMAIL ADDRESS*" required
-           class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              <!-- Name -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="FIRST NAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <input type="text" placeholder="SURNAME *" required
+                      class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+              </div>
 
-    <!-- Name -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <input type="text" placeholder="FIRST NAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-      <input type="text" placeholder="SURNAME *" required
-             class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-    </div>
+              <!-- Contact and Market -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input id="phone" type="tel" 
+        placeholder="ENTER PHONE NUMBER *" required
+        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                <select class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+                  <option value="" disabled selected hidden>SELECT SERVICE</option>
+                  <option>Laboratory Testing</option>
+                  <option>Field Investigations</option>
+                  <option>Equipment Hire</option>
+                  <option>Training & Capacity Building</option>
+                </select>
+              </div>
 
-    <!-- Contact and Market -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <select required class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="" class="text-gray-400">CONTACT NUMBER *</option>
-        <option>Uganda</option>
-        <option>Kenya</option>
-      </select>
-      <select class="w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <option value="">SELECT SERVICE</option>
-        <option>Laboratory Testing</option>
-        <option>Field Investigations</option>
-        <option>Equipment Hire</option>
-        <option>Training & Capacity Building</option>
-      </select>
-    </div>
+              <!-- Challenge -->
+              <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
+                        class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
 
-    <!-- Challenge -->
-    <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
-              class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+              <!-- Consent -->
+              <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
+                <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+                <span>I understand the privacy policy </span>
+              </label>
+              <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+                </p>
 
-    <!-- Consent -->
-    <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
-      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
-      <span>I understand the privacy policy </span>
-    </label>
-    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
-      </p>
-
-    <!-- Submit / Take me home -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <button type="submit"
-              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-        SEND
-      </button>
-      <button type="button"
-              class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
-        TAKE ME HOME
-      </button>
-    </div>
-  </div>
-</div>
+              <!-- Submit / Take me home -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button type="submit" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  SEND
+                </button>
+                <button type="button" class="w-full text-white py-3 rounded hover:bg-[#2c2f33] transition border border-[#2c2f33]">
+                  TAKE ME HOME
+                </button>
+              </div>
+            </div><!-- End of Modal Content -->
+          </div><!-- End of Modal Overlay -->
 
           <button id="menuToggle" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
-        </div>
+        </div><!-- End of Right Navigation Links -->
       </div>
     </header>
 
-  <!-- Overlay dropdown -->
-  <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-51 hidden">
-    <div class="bg-black text-white p-6 space-y-3 h-full w-[70%] text-lg left-0 border-r border-dotted border-gray-400/40">
-      <a href="#" class="block hover:text-gray-300">Home</a>
-      <a href="#" class="block hover:text-gray-300">About Us</a>
-      <a href="#" class="block hover:text-gray-300">Services</a>
-      <!--<a href="#" class="block hover:text-gray-300">Projects</a>-->
-       <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
-    Projects
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </a>
-  </div>
-  </div>
+ <!-- Overlay dropdown -->
+  <div id="mobileMenu" class="fixed inset-0 z-49 hidden md:hidden">
+    <!--<div class="bg-black text-white p-6 space-y-1 h-full w-[50%] text-lg left-0 border-r border-dotted border-gray-400/40">-->
+    <div class="bg-black text-white pt-16 p-6 space-y-4 w-full md:hidden">
+      <a href="/" class="block hover:text-gray-300 border-b border-dotted border-gray-400/40">Home</a>
+      <a href="/about.html" class="block hover:text-gray-300 border-b border-dotted border-gray-400/40">About Us</a>
+      <div class="relative group border-b border-dotted border-gray-400/40">
+        <a href="#" class="flex items-center gap-1 hover:text-gray-400">
+          Services
+          <span class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </a>
+        <div class="absolute left-0 top-full mt-2 hidden text-[14px] md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+          <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
+          <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
+          <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
+          <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
+          <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
+          <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
+        </div>
+      </div>
+
+      <div class="relative group border-b border-dotted border-gray-400/40">
+        <a href="#" class="flex items-center gap-1 hover:text-gray-400 ">
+          Projects
+          <span class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </a>
+        <div class="absolute left-0 top-full mt-2 hidden text-[14px] md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+          <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission Lines & Substations</a>
+          <a href="/projects/roads.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+          <a href="/projects/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
+          <a href="/projects/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
+          <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams & HPP</a>
+          <a href="/projects/water.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+        </div>
+      </div>
+      <a href="#" class="block hover:text-gray-300 border-b border-dotted border-gray-400/40">Contact Us</a>
+      <!--<hr class="border-gray-600">-->
+      <div class="flex items-center justify-center border border-gray-900 py-2 rounded-lg hover:bg-[#303030]">
+        <a href="#" class="text-center">Get a Quotation</a>
+      </div>
+    </div>
+  </div><!--End of mobile dropdown-->
+
 
 
   <!-- Hero section -->
@@ -348,10 +378,7 @@
 </div>
 </section>
 
-
-
-
- <footer class="relative bg-black px-8 py-12 md:px-20">
+    <footer class="relative bg-black px-8 py-12 md:px-24">
       <div class="flex flex-col lg:flex-row gap-2">
         <!-- Left Side -->
         <div class="w-full lg:w-[34%]">
@@ -359,20 +386,26 @@
             <img src="/img/logo-on-dark.webp" alt="logo" class="h-9 w-auto mb-4" />
           </a>
 
-          <h2 class="text-white text-[14px]">
-            Geotechnical Engineering and Technology <br />
-            Laboratory (GETLAB) Limited
+          <h2 class="text-white text-[14px] mb-4">
+            Geotechnical Engineering and Technology Laboratory <br />
+            (GETLAB) Limited
           </h2>
-          <p class="mt-4 text-[14px]">
-            Plot 1234, Block 197, Namirembe Hillside Road, <br />
-            Kitetika Cell<br />
-            Kasangati Town Council, Wakiso, Uganda<br />
-            +256 (0) 392 175 883<br>
-            info@getlab.co.ug
+          <p class="text-[14px] mb-1">
+            Plot 1234, Block 197, Namirembe Hillside Road, Kitetika Cell
           </p>
+          
+          <p class="text-[14px] mb-1">Kasangati Town Council, Wakiso, Uganda</p>
+          <p>
+            <a href="tel:+256392175883" class="text-[14px] mb-1 hover:text-white transition">
+              +256 (0) 392 175 883
+            </a>
+          </p>
+            <a href="mailto:getlab.co.ug" class="text-[14px] hover:text-white transition">
+              info@getlab.co.ug
+            </a> 
         </div>
 
-        <!-- Right Side -->
+        
        <!-- Right Section -->
   <div class="w-full lg:w-[66%]">
     <div class="w-full h-72 lg:h-80">
@@ -385,13 +418,30 @@
       </iframe>
     </div>
   </div>
-      </div>
-      <hr class="mt-15 mb-8 border-gray-900">
-      <div class="text-left">&copy; 2025 <strong>GETLAB</strong></div>
+  </div>
 
-     
+  <hr class="mt-15 mb-8 border-[#2c2f33]">
+
+  <div class="flex justify-between items-center">
+    <!-- Left section -->
+    <div class="flex items-center space-x-4 text-[12px] text-white">
+      <span>&copy;2025 GETLAB</span>
+      <a href="/privacy-policy" class="hover:text-gray-300">Privacy Policy</a>
+    </div>
+
+    <!-- Right section -->
+    <div class="flex space-x-4">
+      <a href="https://x.com/GETLAB_Ltd" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="hover:text-gray-300">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/GETLABLtd/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-gray-300">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://ug.linkedin.com/in/getlab-uganda-31108aaa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-gray-300">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
     </footer>
-
-  
   </body>
 </html>
