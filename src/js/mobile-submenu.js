@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+  document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobileMenu');
   if (!mobileMenu) return;
 
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ensure submenus are in the correct state for current viewport
   function resetSubmenus() {
-    mobileMenu.querySelectorAll('.relative.group > div').forEach(sub => {
+    mobileMenu.querySelectorAll('.relative.group > .absolute').forEach(sub => {
       if (isMobile()) {
         sub.classList.remove('absolute');      // remove absolute positioning on mobile
         sub.classList.add('hidden', 'pl-4');   // start hidden and indented
