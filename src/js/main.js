@@ -1,3 +1,21 @@
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+/*const header = document.getElementById('mainHeader');*/
+
+menuToggle.addEventListener('click', () => {
+  //const isOpen = !mobileMenu.classList.contains('hidden');
+  mobileMenu.classList.toggle('hidden');
+/*  header.classList.toggle('hidden');*/
+});
+
+// Close overlay when clicking on the menu background
+mobileMenu.addEventListener('click', (e) => {
+  if (e.target === mobileMenu) {
+    mobileMenu.classList.add('hidden');
+    /*header.classList.remove('hidden');*/
+  }
+});
+
 // Active page
 const currentPath = window.location.pathname;
 const currentPage = currentPath.split("/").pop();
