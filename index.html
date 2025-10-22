@@ -147,31 +147,54 @@
       </div>
     </header>
 
-  <!-- Overlay dropdown -->
-  <div id="mobileMenu" class="fixed inset-0 bg-black/60 z-51 hidden">
-    <div class="bg-black text-white p-6 space-y-3 h-full w-[70%] text-lg left-0 border-r border-dotted border-gray-400/40">
-      <a href="#" class="block hover:text-gray-300">Home</a>
-      <a href="#" class="block hover:text-gray-300">About Us</a>
-      <a href="#" class="block hover:text-gray-300">Services</a>
-      <!--<a href="#" class="block hover:text-gray-300">Projects</a>-->
-      <a href="#" class="nav-link flex items-center gap-1 hover:text-gray-300">
-        Projects
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </a>
+ <!-- Overlay dropdown -->
+  <div id="mobileMenu" class="fixed inset-0 z-49 hidden md:hidden">
+    <!--<div class="bg-black text-white p-6 space-y-1 h-full w-[50%] text-lg left-0 border-r border-dotted border-gray-400/40">-->
+    <div class="bg-black text-white pt-16 p-6 space-y-4 w-full md:hidden">
+      <a href="/" class="block hover:text-gray-300 border-b border-dotted border-gray-400/40">Home</a>
+      <a href="/about.html" class="block hover:text-gray-300 border-b border-dotted border-gray-400/40">About Us</a>
+      <div class="relative group border-b border-dotted border-gray-400/40">
+        <a href="#" class="flex items-center gap-1 hover:text-gray-400">
+          Services
+          <span class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </a>
+        <div class="absolute left-0 top-full mt-2 hidden text-[14px] md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+          <a href="/services/soil-testing.html" class="block px-4 py-2 hover:text-gray-300">Soil testing</a>
+          <a href="/services/asphalt-testing.html" class="block px-4 py-2 hover:text-gray-300">Asphalt testing</a>
+          <a href="/services/concrete-aggregate-testing.html" class="block px-4 py-2 hover:text-gray-300">Concrete & Aggregate testing</a>
+          <a href="/services/chemical-testing.html" class="block px-4 py-2 hover:text-gray-300">Chemical testing</a>
+          <a href="/services/geotechnical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geotechnical investigations</a>
+          <a href="/services/geophysical-investigations.html" class="block px-4 py-2 hover:text-gray-300">Geophysical investigations</a>
+        </div>
+      </div>
 
-  <!-- Mobile -->
-  <div class="mt-2 space-y-1 block md:hidden">
-    <a href="/road-projects.html" class="block px-4 py-2 hover:bg-gray-100">Road Projects</a>
-    <a href="/bridges.html" class="block px-4 py-2 hover:bg-gray-100">Bridges</a>
-    <a href="/dams.html" class="block px-4 py-2 hover:bg-gray-100">Dams</a>
-    <a href="/water-projects.html" class="block px-4 py-2 hover:bg-gray-100">Water Projects</a>
-  </div>
-      <a href="#" class="block hover:text-gray-300">Contact Us</a>
+      <div class="relative group border-b border-dotted border-gray-400/40">
+        <a href="#" class="flex items-center gap-1 hover:text-gray-400 ">
+          Projects
+          <span class="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-[1px]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </a>
+        <div class="absolute left-0 top-full mt-2 hidden text-[14px] md:group-hover:block before:absolute before:-top-2 before:left-0 before:w-full before:h-2 before:bg-transparent">
+          <a href="/projects/transmissions-substations.html" class="block px-4 py-2 hover:text-gray-300">Transmission Lines & Substations</a>
+          <a href="/projects/roads.html" class="block px-4 py-2 hover:text-gray-300">Roads</a>
+          <a href="/projects/bridges.html" class="block px-4 py-2 hover:text-gray-300">Bridges</a>
+          <a href="/projects/buildings.html" class="block px-4 py-2 hover:text-gray-300">Buildings</a>
+          <a href="/projects/dams-hpp.html" class="block px-4 py-2 hover:text-gray-300">Dams & HPP</a>
+          <a href="/projects/water.html" class="block px-4 py-2 hover:text-gray-300">Water</a>
+        </div>
+      </div>
+      <a href="#" class="block hover:text-gray-300 border-b border-dotted border-gray-400/40">Contact Us</a>
       <!--<hr class="border-gray-600">-->
-      <button class="border-gray-900 border-1 py-2 px-2 rounded-lg">
-        <a href="#" class="block hover:text-gray-300">Get a Quote</a></button>
+      <div class="flex items-center justify-center border border-gray-900 py-2 rounded-lg hover:bg-[#303030]">
+        <a href="#" class="text-center">Get a Quotation</a>
+      </div>
     </div>
   </div><!--End of mobile dropdown-->
 
