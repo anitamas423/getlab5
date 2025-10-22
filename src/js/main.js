@@ -1,3 +1,5 @@
+import '../js/mobile-submenu.js';
+
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 /*const header = document.getElementById('mainHeader');*/
