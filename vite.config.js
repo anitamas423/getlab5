@@ -48,6 +48,7 @@ export default defineConfig({
         kampala: resolve(__dirname, "src/kampala-bombo.html"),
         apaa: resolve(__dirname, "src/apaa-bridge.html"),
         kochi: resolve(__dirname, "src/kochi-bridge.html"),
+        privacy: resolve(__dirname, "src/privacy-policy.html"),
       },
     },
   }
