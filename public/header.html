@@ -135,27 +135,27 @@
     <button id="closeModal"
             class="absolute top-3 right-3 hover:text-gray-200 text-2xl">&times;</button>
 
-    <h2 class="text-2xl text-gray-200 font-semibold text-center">Provide us a few details</h2>
+    <h2 class="text-2xl font-semibold text-center text-white">Provide us a few details</h2>
 
     <!-- Email -->
-    <input type="email" placeholder="EMAIL ADDRESS*" required
-        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+    <input type="email" placeholder="Email Address*" required
+        class="text-white text-[15px] placeholder-[#a0a0a0] w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-1 focus:ring-[#14953D]">
 
     <!-- Name -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <input type="text" placeholder="FIRST NAME *" required
-            class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-    <input type="text" placeholder="SURNAME *" required
-            class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
+    <input type="text" placeholder="First Name *" required
+            class="text-white text-[15px] placeholder-[#a0a0a0] w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-1 focus:ring-[#14953D]">
+    <input type="text" placeholder="Last Name *" required
+            class="text-white placeholder-[#a0a0a0] text-[15px] w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-1 focus:ring-[#14953D]">
     </div>
 
     <!-- Contact and Market -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <input id="phone" type="tel" 
-        placeholder="ENTER PHONE NUMBER *" required
-        class="w-full p-3 rounded bg-[#3B3B3B] text-gray-200 focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-        <select class="w-full p-3 text-gray-200 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]">
-            <option value="" disabled selected hidden>SELECT SERVICE</option>
+        placeholder="Enter Phone Number*" required
+        class="text-white text-[15px] placeholder-[#a0a0a0] w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-1 focus:ring-[#14953D]">
+        <select style="color: #a0a0a0;" class="text-[15px] w-full p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-1 focus:ring-[#14953D]">
+            <option value="" disabled selected hidden class="text-blue">Select Service</option>
             <option>Laboratory Testing</option>
             <option>Field Investigations</option>
             <option>Equipment Hire</option>
@@ -165,14 +165,14 @@
 
     <!-- Challenge -->
     <textarea placeholder="TELL US A BIT ABOUT YOUR PROJECT? *" required
-            class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-2 focus:ring-[#14953D]"></textarea>
+            class="w-full h-20 p-3 rounded bg-[#3B3B3B] focus:outline-none focus:ring-1 focus:ring-[#14953D]"></textarea>
 
     <!-- Consent -->
     <label class="flex items-center mb-0 space-x-2 text-sm text-gray-500">
-    <input type="checkbox" class="h-4 w-4 text-[#14953D]">
-    <span>I understand the privacy policy </span>
+      <input type="checkbox" class="h-4 w-4 text-[#14953D]">
+      <span>I understand the privacy policy </span>
     </label>
-    <p class="pl-6 text-gray-500">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
+    <p class="pl-6 text-gray-500 text-sm">I have read and understood that my data will be used by GETLAB to provide me with the services I request.
     </p>
 
     <!-- Submit / Take me home -->
