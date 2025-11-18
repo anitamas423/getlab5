@@ -30,7 +30,7 @@
           <!-- First card -->
             <div class="relative overflow-hidden h-[400px] col-span-1 sm:col-span-2 lg:col-span-2 relative group 
             overflow-hidden border-t border-l border-r border-[#2c2f33]">
-            <img src="/img/eacop-pipeline.jpeg" alt="" loading="eager" class="absolute inset-0 w-full h-full object-cover object-center" />
+            <img src="/img/eacop-pipeline.jpeg" alt="" loading="eager" class="lazy-img absolute inset-0 w-full h-full object-cover object-center" />
               
             <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/95 to-transparent"></div>
     
@@ -65,7 +65,7 @@
 
         <!-- Second card -->
           <div class="relative overflow-hidden h-[400px] overflow-hidden border-t border-l border-r border-[#2c2f33]">
-            <img src="/img/karuma-lira/karuma-cover.jpeg" alt="" loading="eager" class="absolute inset-0 w-full h-full object-cover object-center" />
+            <img src="/img/karuma-lira/karuma-cover.jpeg" alt="" loading="eager" class="lazy-img absolute inset-0 w-full h-full object-cover object-center" />
             <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/95 to-black/20"></div>
           <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
             <div class="bg-white rounded-lg px-2 inline-block">
@@ -120,7 +120,7 @@
       
           <!-- Third card -->
           <div class="relative overflow-hidden h-[400px] overflow-hidden border-t border-l border-r border-[#2c2f33]">
-            <img src="/img/kawanda-masaka/cover.jpg" alt="" loading="eager" class="absolute inset-0 w-full h-full object-cover object-center" />
+            <img src="/img/kawanda-masaka/cover.jpg" alt="" loading="eager" class="lazy-img absolute inset-0 w-full h-full object-cover object-center" />
               <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-black/90 to-transparent"></div>
 
             <div class="absolute inset-0 flex flex-col justify-end items-start p-6 text-left">
@@ -325,5 +325,12 @@
       
         <div id="footer"></div>   
     </main>
+    <script>
+      document.querySelectorAll('.lazy-img').forEach(img => {
+        img.addEventListener('load', () => {
+          img.classList.add('opacity-100');
+        });
+      });
+    </script>
   </body>
 </html>
