@@ -6,7 +6,7 @@
 
 }
 .font-hero{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
