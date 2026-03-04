@@ -98,6 +98,11 @@ fetch("/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;
+
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
   })
   .catch(err => console.error("Footer load error:", err));
 
