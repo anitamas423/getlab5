@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 // fetching the header
 fetch("/header.html")
   .then(response => response.text())
@@ -29,6 +30,11 @@ function initModal() {
   const modal = document.getElementById("modalOverlay");
   const closeBtn = document.getElementById("closeModal");
   const openBtns = document.querySelectorAll(".openModal");
+  const form = document.getElementById('contactForm');
+  const submitText = document.getElementById('submitText');
+
+  // Initialize EmailJS 
+  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
   if (!modal || !closeBtn || !openBtns.length) return; // nothing to attach
 
@@ -50,6 +56,27 @@ function initModal() {
       modal.classList.add("hidden");
       document.body.style.overflow = "";
     }
+  });
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    submitText.textContent = 'Sending...';
+
+    // These IDs come from your EmailJS dashboard
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;;
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        submitText.textContent = 'Send Email';
+        alert('Message sent successfully!');
+        form.reset();
+        modal.classList.add('hidden'); // Close modal
+      }, (err) => {
+        submitText.textContent = 'Send Email';
+        alert('Failed to send message: ' + JSON.stringify(err));
+      });
   });
 }
 //
